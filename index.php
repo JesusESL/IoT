@@ -35,7 +35,7 @@
 	}
 	console.log("Test")	
 	// Close connection
-	pg_close($dbconn);
+	//pg_close($dbconn);
 
 
 ?>
