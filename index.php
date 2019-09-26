@@ -23,7 +23,7 @@
 	
 	echo "Dato1".$dato1.",Dato2".$dato2.",Temperatura".$temperatura."\n";
 	
-	if($temperatura!=null)
+	/*if($temperatura!=null)
 	{
 		$query ="INSERT INTO test_table (dato1,dato2, temperatura) VALUES (".$dato1.",".$dato2.",".$temperatura.")";
 		
@@ -31,7 +31,7 @@
 		
 		echo "Elemento guardados"
 		console.log("Elemento guardados")	
-	}
+	}*/
 	console.log("Test")	
 	// Close connection
 	pg_close($dbconn);
