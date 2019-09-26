@@ -18,12 +18,13 @@
 		echo "Conexion exitosa!!\n";
 	}
 
-	/*$dato1 = $_GET["dato1"];
+	$dato1 = $_GET["dato1"];
 	$dato2 = $_GET["dato2"];
 	$temperatura = $_GET["temperatura"];
 	
+	echo "Dato1".$dato1.",Dato2".$dato2.",Temperatura".$temperatura.",";
 	
-	if($temperatura!=null)
+	/*if($temperatura!=null)
 	{
 		$query ="INSERT INTO tbl_datos (temperatura,humedad, tiempo) VALUES (".$dato1.",".$dato2.",'".$temperatura."')";
 		
