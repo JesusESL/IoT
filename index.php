@@ -24,9 +24,9 @@
 	
 	echo "Dato1".$dato1.",Dato2".$dato2.",Temperatura".$temperatura."\n";
 	
-	/*if($temperatura!=null)
+	if($temperatura!=null)
 	{
-		$query ="INSERT INTO test_table (dato1,dato2, temperatura) VALUES (".$dato1.",".$dato2.",".$temperatura.")";
+		$query ="INSERT INTO test_table (dato1,dato2,temperatura) VALUES (".$dato1.",".$dato2.",".$temperatura.")";
 		
 		pg_query($query) or die('Error: ' . pg_last_error());
 		
@@ -35,7 +35,7 @@
 	}
 	console.log("Test")	
 	// Close connection
-	pg_close($dbconn);*/
+	pg_close($dbconn);
 
 
 ?>
