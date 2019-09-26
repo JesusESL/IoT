@@ -1,5 +1,4 @@
 <?
-	echo "Test\n";
 	$host = "ec2-54-83-201-84.compute-1.amazonaws.com";
 	$user = "ryvfvynzqazlcx";
 	$password = "54073c0f267ca0ace145876ac7d4d981064d8c9f1af3efd503512a629ec800b7";
@@ -22,9 +21,9 @@
 	$dato2 = $_GET["dato2"];
 	$temperatura = $_GET["temperatura"];
 	
-	echo "Dato1".$dato1.",Dato2".$dato2.",Temperatura".$temperatura.",";
+	echo "Dato1".$dato1.",Dato2".$dato2.",Temperatura".$temperatura."\n";
 	
-	/*if($temperatura!=null)
+	if($temperatura!=null)
 	{
 		$query ="INSERT INTO tbl_datos (temperatura,humedad, tiempo) VALUES (".$dato1.",".$dato2.",'".$temperatura."')";
 		
@@ -35,7 +34,7 @@
 	}
 	console.log("Test")	
 	// Close connection
-	pg_close($dbconn);*/
+	pg_close($dbconn);
 
 
 ?>
