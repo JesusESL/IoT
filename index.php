@@ -26,9 +26,9 @@
 	
 	if($temperatura!=null)
 	{
-		$query ="INSERT INTO test_table (dato1,dato2,temperatura) VALUES (".$dato1.",".$dato2.",".$temperatura.")";
+		/*$query ="INSERT INTO test_table (dato1,dato2,temperatura) VALUES (".$dato1.",".$dato2.",".$temperatura.")";
 		
-		pg_query($query) or die('Error: ' . pg_last_error());
+		pg_query($query) or die('Error: ' . pg_last_error());*/
 		
 		echo "Elemento guardados"
 		console.log("Elemento guardados")	
