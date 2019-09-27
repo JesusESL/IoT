@@ -9,9 +9,9 @@
 <body>
 <h1>Datos para enviar a PHP</h1>
 
-<input type="text" id="nombre" placeholder="Nombre" accept="text/plain"><br><br>
-<input type="text" id="apellido" placeholder="Apellido" accept="text/plain"><br><br>
-<input type="number" id="edad" placeholder="Edad" accept="text/plain">
+<input type="number" id="dato1" placeholder="dato1" accept="text/plain"><br><br>
+<input type="number" id="dato2" placeholder="dato2" accept="text/plain"><br><br>
+<input type="number" id="temperatura" placeholder="temperatura" accept="text/plain">
 
 <div class="enviar"><a href="">Enviar</a></div>
 <hr>
@@ -22,12 +22,12 @@
 $(".enviar").click(function(e) {
 	
 	e.preventDefault();
-	var nombre = $("#nombre").val(),
-	apellido = $("#apellido").val(),
-	edad = $("#edad").val(),
+	var dato1 = $("#dato1").val(),
+	dato2 = $("#dato2").val(),
+	temperatura = $("#temperatura").val(),
 
 	//"nombre del parámetro POST":valor (el cual es el objeto guardado en las variables de arriba)
-	datos = {"nombre":nombre, "apellido":apellido,"edad":edad};
+	datos = {"dato1":dato1, "dato2":dato2,"temperatura":temperatura};
 
 	$.ajax({
 		url: "php/datos.php",
@@ -37,9 +37,9 @@ $(".enviar").click(function(e) {
 		if (respuesta.estado === "ok") {
 			console.log(JSON.stringify(respuesta));
 
-			var nombre = respuesta.nombre,
-			apellido = respuesta.apellido,
-			edad = respuesta.edad;
+			var dato1 = respuesta.dato1,
+			dato2 = respuesta.dato2,
+			temperatura = respuesta.temperatura;
 
 			$(".respuesta").html("Servidor:<br><pre>"+JSON.stringify(respuesta, null, 2)+"</pre>");
 		}
