@@ -42,17 +42,11 @@ echo json_encode($datos, JSON_FORCE_OBJECT);
 		
 	if($temperatura!=null)
 	{
-		$query ="INSERT INTO test_tbl (dato1,dato2,temperatura) VALUES (".$datos1.",".$dato2.",".$temperatura.)";
+		$query ="INSERT INTO test_table (dato1,dato2,temperatura) VALUES (".$dato1.",".$dato2.",".$temperatura.")";
 		pg_query($query) or die('Error: ' . pg_last_error());
-		echo "Dato insertado correctamente";
+		echo "Dato insertado correctamente\n";
 		
 	}
-	 
-	//http_response_code(200)
-	//header("Content-type:application/json");
-	 
-	// codificar la respuesta en formato JSON
-	//echo json_encode($resutado); 
 		 
 	// Close connection
 	pg_close($dbconn);
