@@ -42,7 +42,7 @@ echo json_encode($datos, JSON_FORCE_OBJECT);
 		
 	if($temperatura!=null)
 	{
-		$query ="INSERT INTO test_table (dato1,dato2,temperatura) VALUES (".$dato1.",".$dato2.",".$temperatura.")";
+		$query ="SELECT test_table (dato1,dato2,temperatura) VALUES (".$dato1.",".$dato2.",".$temperatura.")";
 		pg_query($query) or die('Error: ' . pg_last_error());
 		echo "Dato insertado correctamente\n";
 		
