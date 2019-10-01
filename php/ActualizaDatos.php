@@ -1,8 +1,8 @@
 <?
-	$host = "ec2-54-225-113-7.compute-1.amazonaws.com";
-	$user = "gazcbqgnxtqhas";
-	$password = "8cfc04b0dafa4a2a9a4c561fe6309990f5e640e7ab9841d899a2324fd9423bce";
-	$dbname = "ddpd7e6mh8je0h";
+	$host = "ec2-54-83-201-84.compute-1.amazonaws.com";
+	$user = "ryvfvynzqazlcx";
+	$password = "54073c0f267ca0ace145876ac7d4d981064d8c9f1af3efd503512a629ec800b7";
+	$dbname = "d1jv2gq7sc413i";
 	$port = "5432";
 	
 	$conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
@@ -21,11 +21,6 @@
 	 
 	
 	$temperatura = $_GET["temperatura"];
-	$humedad = $_GET["humedad"];
-	
-	$dato1 = $_GET["dato1"];
-	
-	$dato2 = $_GET["dato2"];
 	
 	date_default_timezone_set('America/Mexico_City');
 	$tiempo = date("Y-m-d H:i:s");
@@ -33,7 +28,7 @@
 	
 	if($temperatura!=null)
 	{
-		$query ="UPDATE tbl_iot SET temperatura = ".$temperatura." WHERE id = 1";
+		$query ="UPDATE test_table SET temperatura = ".$temperatura." WHERE id = 42";
 		
 		
 		

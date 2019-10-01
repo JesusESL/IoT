@@ -2,10 +2,10 @@
 
 	$temperatura = 0;
 	
-	$host = "ec2-54-225-113-7.compute-1.amazonaws.com";
-	$user = "gazcbqgnxtqhas";
-	$password = "8cfc04b0dafa4a2a9a4c561fe6309990f5e640e7ab9841d899a2324fd9423bce";
-	$dbname = "ddpd7e6mh8je0h";
+	$host = "ec2-54-83-201-84.compute-1.amazonaws.com";
+	$user = "ryvfvynzqazlcx";
+	$password = "54073c0f267ca0ace145876ac7d4d981064d8c9f1af3efd503512a629ec800b7";
+	$dbname = "d1jv2gq7sc413i";
 	$port = "5432";
 	$conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
 	// establecemos una conexion con el servidor postgresSQL
@@ -16,7 +16,7 @@
 		
 		
 		
-		$sql = "SELECT * FROM tbl_iot WHERE id=1";
+		$sql = "SELECT * FROM test_table WHERE id=42";
 		// Ejecutar la consulta:
 		$rs = pg_query( $conexion, $sql );
 		if( $rs )
