@@ -15,7 +15,7 @@
 				while( $obj = pg_fetch_object($rs) )
 					$temperature = $obj->temperature;
 					$humidity = $obj->humidity;
-					$temperature = $obj->date;
+					$date = $obj->date;
 			}
 		}
 	} 
@@ -24,7 +24,7 @@
 	header('Content-Type: application/json');
 	$datos = array(
 		'estado' => 'ok',
-		'temperatura' => $temperatura,
+		'temperatura' => $temperature,
 		'humidity' => $humidity,
 		'date' => $date
 	);
