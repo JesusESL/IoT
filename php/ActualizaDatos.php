@@ -20,7 +20,7 @@
 	date_default_timezone_set('America/Mexico_City');
 	$date = date("Y-m-d");
 
-	if($temperatura != null){
+	if($temperature != null){
 		$query =" UPDATE iot_table SET temperature = ".$temperature.", humidity = ".$humidity.", date = ".$date." WHERE id = 1";
 		pg_query($query) or die('Error: ' . pg_last_error());
 		echo "Dato Actualizado";
