@@ -24,7 +24,7 @@
 	header('Content-Type: application/json');
 	$datos = array(
 		'estado' => 'ok',
-		'temperatura' => $temperature,
+		'temperature' => $temperature,
 		'humidity' => $humidity,
 		'date' => $date
 	);
