@@ -7,6 +7,9 @@
 	$conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
 	$conexion = pg_connect($conn_string);
 
+	$temperature = 0;
+	$humidity = 0;
+	
 	if($conexion) {
 		$sql = "SELECT * FROM iot_table WHERE id=1";
 		$rs = pg_query( $conexion, $sql );
