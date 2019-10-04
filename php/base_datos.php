@@ -9,16 +9,17 @@
 
 	$temperature = 0;
 	$humidity = 0;
-	
+
 	if($conexion) {
 		$sql = "SELECT * FROM iot_table WHERE id=1";
 		$rs = pg_query( $conexion, $sql );
 		if( $rs ){
 			if( pg_num_rows($rs) >= 0 ){
-				while( $obj = pg_fetch_object($rs) )
+				while( $obj = pg_fetch_object($rs) ){
 					$temperature = $obj->temperature;
 					$humidity = $obj->humidity;
 					$date = $obj->date;
+				}
 			}
 		}
 	} 
@@ -27,8 +28,8 @@
 	header('Content-Type: application/json');
 	$datos = array(
 		'estado' => 'ok',
-		'temperature' => $humidity,
-		'humidity' => $temperature,
+		'temperature' => $temperature,
+		'humidity' => $humidity,
 		'date' => $date
 	);
 	echo json_encode($datos, JSON_FORCE_OBJECT);
