@@ -12,6 +12,7 @@
 		$rs = pg_query( $conexion, $sql );
 		if( $rs ){
 			if( pg_num_rows($rs) >= 0 ){
+				console.log($obj = pg_fetch_object($rs));
 				while( $obj = pg_fetch_object($rs) )
 					$temperature = $obj->temperature;
 					$humidity = $obj->humidity;
