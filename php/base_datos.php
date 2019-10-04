@@ -13,9 +13,9 @@
 		if( $rs ){
 			if( pg_num_rows($rs) >= 0 ){
 				while( $obj = pg_fetch_object($rs) )
-					$temperature = $obj->temperature,
-					$humidity = $obj->humidity,
-					$date = $obj->date
+					$temperature = $obj->temperature;
+					$humidity = $obj->humidity;
+					$date = $obj->date;
 			}
 		}
 	} 
