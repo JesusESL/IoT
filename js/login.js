@@ -18,6 +18,12 @@ $(document).ready(function(){
                 console.log(JSON.stringify(respuesta))
                 usernameDB = respuesta.username;
                 passDB = respuesta.pass;
+                console.log("DB");
+                console.log(usernameDB);
+                console.log(passDB);
+                console.log("Form");
+                console.log(_username);
+                console.log(_pass);
             }
         });
     });
