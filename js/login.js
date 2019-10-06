@@ -2,8 +2,8 @@ $(document).ready(function(){
     $('form').submit(function(event){
         event.preventDefault();
 
-        var username = $("#username").val();
-        var pass = $("#pass").val();
+        var _username = $("#username").val();
+        var _pass = $("#pass").val();
         var usernameDB = "";
         var passDB = "";
         
