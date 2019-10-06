@@ -24,12 +24,13 @@ $(document).ready(function(){
                 console.log("Form");
                 console.log(_username);
                 console.log(_pass);
+                if((usernameDB == _username) && (passDB == _pass)){
+                    console.log("Usuario correcto");
+                    window.location.href = "../main-page.php";
+                } else {
+                    console.log("Usuario incorrecto");
+                }
             }
         });
-
-        if((usernameDB == _username) && (passDB == _pass)){
-            console.log("Usuario correcto");
-            window.location.href = "../main-page.php";
-        }
     });
 });
