@@ -28,7 +28,8 @@ $(document).ready(function(){
         });
 
         if((usernameDB == _username) && (passDB == _pass)){
-            window.location.href = "main-page.php"
+            console.log("Usuario correcto");
+            window.location.href = "../main-page.php";
         }
     });
 });
