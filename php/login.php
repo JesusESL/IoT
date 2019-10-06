@@ -7,8 +7,11 @@
    $conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
    $dbconn = pg_connect($conn_string);
 
+   $username = "";
+   $pass = "";
+
    if($conexion) {
-    $sql = "SELECT * FROM iot_table WHERE id=1";
+    $sql = "SELECT * FROM users WHERE id=1";
     $rs = pg_query( $conexion, $sql );
     if( $rs ){
         if( pg_num_rows($rs) >= 0 ){
@@ -19,6 +22,8 @@
         }
     }
 
+    echo $username."\n";
+    echo $pass."\n";
     console.log($username);
     console.log($pass);
 } 
