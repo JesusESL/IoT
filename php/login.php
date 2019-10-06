@@ -21,9 +21,6 @@
                 }
             }
         }
-        echo "Conecxion\n";
-    } else {
-        echo "No conexion\n";
     }
     
     $opcion = $_POST["opcion"];

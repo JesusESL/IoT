@@ -18,9 +18,10 @@ $(document).ready(function(){
                 console.log(JSON.stringify(respuesta));
                 usernameDB = JSON.parse(respuesta.username);
                 passDB = JSON.parse(respuesta.pass);
+                console.log(username);
+                console.log(pass);
                 console.log(usernameDB);
                 console.log(passDB);
-                return 1;
             }
         });
     });
