@@ -5,7 +5,7 @@
     $dbname = "d1jv2gq7sc413i";
     $port = "5432";
     $conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
-    $dbconn = pg_connect($conn_string);
+    $conexion = pg_connect($conn_string);
 
     $username = "";
     $pass = "";
@@ -23,7 +23,7 @@
         }
         echo "Conecxion\n";
     } else {
-        echo "No conecxion\n";
+        echo "No conexion\n";
     }
     
     $opcion = $_POST["opcion"];
