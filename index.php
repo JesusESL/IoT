@@ -10,7 +10,7 @@
     <div class="login">
         <img src="images/login-user.svg" class="login-icon">
         <h1>Sign in</h1>
-        <form>
+        <form action="php/login.php" method="POST">
             <p>Username</p>
             <input type="text" id="username" placeholder="Enter username">
             <p>Password</p>
