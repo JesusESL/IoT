@@ -14,12 +14,11 @@
             <p>Username</p>
             <input type="text" id="username" placeholder="Enter username">
             <p>Password</p>
-            <input type="password" id="password" placeholder="Enter password">
+            <input type="password" id="pass" placeholder="Enter password">
             <input type="submit" id="loginButton" value="Login">
         </form>
     </div>    
-    <script src="js/raphael-2.1.4.min.js"></script>
-    <script src="js/justgage.js"></script>	
+
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/login.js"></script>
 </body>

@@ -1,9 +1,11 @@
 $(document).ready(function(){
     $('form').submit(function(event){
         event.preventDefault();
-        
+
         var username = $("#username").val();
-        var password = $("#password").val();
+        var pass = $("#pass").val();
+        var usernameDB = "";
+        var passDB = "";
         
         opcion = 1;
         datos = {"Opcion":opcion};
