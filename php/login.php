@@ -18,6 +18,8 @@
             while( $obj = pg_fetch_object($rs) ){
                 $username = $obj->username;
                 $pass = $obj->pass;
+                console.log($username);
+                console.log($pass);
             }
         }
     }
