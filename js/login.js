@@ -16,8 +16,8 @@ $(document).ready(function(){
         }).done(function(respuesta){
             if (respuesta.estado === "ok") {
                 console.log(JSON.stringify(respuesta))
-                usernameDB = JSON.parse(respuesta.username);
-                passDB = JSON.parse(respuesta.pass);
+                usernameDB = respuesta.username;
+                passDB = respuesta.pass;
             }
         });
     });
