@@ -10,17 +10,16 @@
     <div class="login">
         <img src="images/login-user.svg" class="login-icon">
         <h1>Sign in</h1>
-        <form method="POST" action="php/login.php">
+        <form>
             <p>Username</p>
-            <input type="text" name="username" placeholder="Enter username">
+            <input type="text" id="username" placeholder="Enter username">
             <p>Password</p>
-            <input type="password" name="password" placeholder="Enter password">
-            <input type="submit" name="" value="Login">
+            <input type="password" id="password" placeholder="Enter password">
+            <input type="submit" id="loginButton" value="Login">
         </form>
     </div>    
 
-    <script src="js/raphael-2.1.4.min.js"></script>
-    <script src="js/justgage.js"></script>	
     <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
