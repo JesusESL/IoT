@@ -25,5 +25,13 @@
             }
         }
     }
-} 
+    
+    $opcion = $_POST["opcion"];
+	header('Content-Type: application/json');
+	$datos = array(
+		'estado' => 'ok',
+		'username' => $username,
+		'pass' => $pass
+	);
+	echo json_encode($datos, JSON_FORCE_OBJECT);
 ?>
