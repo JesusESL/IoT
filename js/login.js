@@ -6,7 +6,7 @@ $(document).ready(function(){
         opcion = 1;
         datos = {"Opcion":opcion};
         $.ajax({
-            url: "php/login.php",
+            url: "../php/login.php",
             type: "POST",
             data: datos
             }).done(function(respuesta){
