@@ -26,5 +26,9 @@ $(document).ready(function(){
                 console.log(_pass);
             }
         });
+
+        if((usernameDB == _username) && (passDB == _pass)){
+            window.location.href = "main-page.php"
+        }
     });
 });

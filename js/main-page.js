@@ -30,7 +30,7 @@ window.setInterval(
         opcion = 1;
         datos = {"Opcion":opcion};
         $.ajax({
-        url: "php/base_datos.php",
+        url: "../php/base_datos.php",
         type: "POST",
         data: datos
         }).done(function(respuesta){
