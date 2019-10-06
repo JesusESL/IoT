@@ -13,15 +13,10 @@ $(document).ready(function(){
             url: "../php/login.php",
             type: "POST",
             data: datos
-            }).done(function(respuesta){
+        }).done(function(respuesta){
             if (respuesta.estado === "ok") {
-                console.log(JSON.stringify(respuesta));
-                console.log(respuesta.username);
-                usernameDB = JSON.parse(respuesta.username);
-                console.log(respuesta.pass);
-                passDB = JSON.parse(respuesta.pass);
-                console.log(username);
-                console.log(pass);
+                usernameDB = JSON.parse(JSON.stringify(respuesta).username);
+                passDB = JSON.parse(JSON.stringify(respuesta).pass);
             }
         });
     });
