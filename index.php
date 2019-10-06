@@ -19,6 +19,7 @@
         </form>
     </div>    
 
+    <script src="js/raphael-2.1.4.min.js"></script>
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/login.js"></script>
 </body>
