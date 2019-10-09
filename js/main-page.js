@@ -103,7 +103,7 @@ $('#power').click(function() {
         url: "../php/sendData.php",
         data: { "opcion" : 1 , "button" : "power" }
     }).done(function( msg ) {
-        alert( "Data Saved: " + msg );
+        //alert( "Data Saved: " + msg );
     });
 });
 
@@ -117,7 +117,7 @@ $('#add').click(function() {
         url: "../php/sendData.php",
         data: { "opcion" : 1 , button: "add" }
     }).done(function( msg ) {
-        alert( "Data Saved: " + msg );
+        //alert( "Data Saved: " + msg );
     });
 });
 
@@ -131,6 +131,6 @@ $('#remove').click(function() {
         url: "../php/sendData.php",
         data: { "opcion" : 1 , button: "remove" }
     }).done(function( msg ) {
-        alert( "Data Saved: " + msg );
+        //alert( "Data Saved: " + msg );
     });
 });
