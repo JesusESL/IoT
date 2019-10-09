@@ -40,7 +40,11 @@
                 <div class="role">
                     <div class="role_text">Role:</div>
                     <br>
-                    <input type="text" id="role" placeholder="Enter role">
+                    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Role</a>
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="#!">Admin</a></li>
+                        <li><a href="#!">Developer</a></li>
+                    </ul>
                 </div>
                 <input type="submit" id="loginButton" value="Create user">
             </div>
