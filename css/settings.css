@@ -90,18 +90,18 @@
     text-align: center;
 }
 
-.wrapper .content .info .chart {
+.wrapper .content .chart .sensor_name{
+    font-size: 36px;
+    color: #73879C;
+}
+
+.wrapper .content .chart {
     margin: 0;
     padding: 0;
     display: inline-block;
 }
 
-.wrapper .content .info .chart .sensor_name{
-    font-size: 36px;
-    color: #73879C;
-}
-
-.wrapper .content .info .chart .gauge {
+.wrapper .content .chart .gauge {
     width: 450px;
     height: 400px;
 }

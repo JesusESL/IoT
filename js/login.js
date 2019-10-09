@@ -28,7 +28,7 @@ $(document).ready(function(){
                     console.log("Usuario correcto");
                     localStorage.setItem("username", _username);
                     localStorage.setItem("password", _pass);
-                    window.location.href = "../main-page.php";
+                    //window.location.href = "../main-page.php";
                 } else {
                     console.log("Usuario incorrecto");
                 }

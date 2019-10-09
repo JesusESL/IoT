@@ -7,17 +7,19 @@
     $conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
     $conexion = pg_connect($conn_string);
 
-    $username = "";
-    $pass = "";
+    $usernames = array();
+    $passwords = array();
 
     if($conexion) {
         $sql = "SELECT * FROM users WHERE id=1";
         $rs = pg_query( $conexion, $sql );
         if( $rs ){
-            if( pg_num_rows($rs) >= 0 ){
-                while( $obj = pg_fetch_object($rs) ){
-                    $username = $obj->username;
-                    $pass = $obj->pass;
+            for ($x = 0; $x < pg_num_cols($rs); $x++){
+                if( pg_num_rows($rs) >= 0 ){
+                    while( $obj = pg_fetch_object($rs) ){
+                        array_push($usernames, $obj->username);
+                        array_push($passwords, $obj->pass);
+                    }
                 }
             }
         }

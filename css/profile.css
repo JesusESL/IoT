@@ -87,29 +87,30 @@
 
 .wrapper .content .info{
     margin-top: 20px;
-    text-align: center;
 }
 
-.wrapper .content .info .chart {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
+.wrapper .content .info .username {
+    margin: 20px;
 }
 
-.wrapper .content .info .chart .sensor_name{
-    font-size: 36px;
-    color: #73879C;
+.wrapper .content .info .role {
+    margin: 20px;
 }
 
-.wrapper .content .info .chart .gauge {
-    width: 450px;
-    height: 400px;
+.wrapper .content .info .username .username_text{
+    font-size: 24px;
 }
 
-.wrapper .content .info .buttons a{
-    margin: 15px;
+.wrapper .content .info .username .username_value{
+    font-size: 18px;
+    margin-left: 40px;
 }
 
-.wrapper .content .info .buttons a i{
-    font-size: 2rem;
+.wrapper .content .info .role .role_text{
+    font-size: 24px;
+}
+
+.wrapper .content .info .role .role_value{
+    font-size: 18px;
+    margin-left: 40px;
 }
