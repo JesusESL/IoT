@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Iot project</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/main-page.css">
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://kit.fontawesome.com/f8dbaa81b2.js" crossorigin="anonymous"></script>
@@ -25,6 +25,18 @@
         </div>
         <div class="content">
             <div class="header">Profile</div>
+            <div class="info">
+                <div class="username">
+                    <div class="username_text">Username:</div>
+                    <br>
+                    <div id="username_value" class="username_value"></div>
+                </div>
+                <div class="role">
+                    <div class="role_text">Role:</div>
+                    <br>
+                    <div id="role_value" class="role_value"></div>
+                </div>
+            </div>
         </div>
     </div>
     
