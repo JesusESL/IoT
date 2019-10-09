@@ -26,7 +26,7 @@
         <div class="content">
             <div class="header">Profile</div>
             <div class="info">
-                <div class="username">
+                <div class="username_info">
                     <div class="username_text">Username:</div>
                     <br>
                     <div id="username_value" class="username_value"></div>

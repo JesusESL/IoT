@@ -89,7 +89,7 @@
     margin-top: 20px;
 }
 
-.wrapper .content .info .username {
+.wrapper .content .info .username_info {
     margin: 20px;
 }
 
@@ -97,11 +97,11 @@
     margin: 20px;
 }
 
-.wrapper .content .info .username .username_text{
+.wrapper .content .info .username_info .username_text{
     font-size: 24px;
 }
 
-.wrapper .content .info .username .username_value{
+.wrapper .content .info .username_info .username_value{
     font-size: 18px;
     margin-left: 40px;
 }
