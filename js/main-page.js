@@ -101,7 +101,7 @@ $('#power').click(function() {
     $.ajax({
         type: "POST",
         url: "../php/sendData.php",
-        data: { button: "power" }
+        data: { "opcion" : 1 , "button" : "power" }
     }).done(function( msg ) {
         alert( "Data Saved: " + msg );
     });
