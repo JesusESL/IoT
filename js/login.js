@@ -4,7 +4,7 @@ $(document).ready(function(){
 
         var _username = $("#username").val();
         var _pass = $("#pass").val();
-        var _rol = "";
+        var _role = "";
         var users = "";
         var passwords = "";
         var roles = "";
@@ -34,7 +34,7 @@ $(document).ready(function(){
                 while(users[i] != null){
                     if(users[i] == _username){
                         if(passwords[i] == _pass){
-                            _rol = respuesta.roles[i];
+                            _role = respuesta.roles[i];
                             flag = true;
                             break;
                         }
@@ -45,9 +45,9 @@ $(document).ready(function(){
                 if(flag){
                     console.log("Usuario correcto");
                     //console.log(_username);
-                    //console.log(_rol);
+                    //console.log(_role);
                     localStorage.setItem("username", _username);
-                    localStorage.setItem("rol", _rol);
+                    localStorage.setItem("role", _role);
                     window.location.href = "../main-page.php";
                 }else {
                     document.getElementById("error_submit").innerHTML = "Username or password incorrect";

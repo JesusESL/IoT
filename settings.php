@@ -26,6 +26,23 @@
         </div>
         <div class="content">
             <div class="header">Settings</div>
+            <div id="info" class="info">
+                <div class="username_info">
+                    <div class="username_text">Create username:</div>
+                    <br>
+                    <input type="text" id="username" placeholder="Enter username">
+                </div>
+                <div class="password_info">
+                    <div class="username_text">Password:</div>
+                    <br>
+                    <input type="text" id="password" placeholder="Enter password">
+                </div>
+                <div class="role">
+                    <div class="role_text">Role:</div>
+                    <br>
+                    <input type="text" id="role" placeholder="Enter role">
+                </div>
+            </div>
         </div>
     </div>
     
