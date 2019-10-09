@@ -10,7 +10,9 @@
     if($conexion) {
         $sql = "SELECT * FROM users";
         $rs = pg_query( $conexion, $sql );
-        console.log($rs);
+        $usernames = pg_fetch_all_columns($rs, 1);
+        $passwords = pg_fetch_all_columns($rs, 2);
+        $roles = pg_fetch_all_columns($rs, 3);
         /*if( $rs ){
             for ($x = 0; $x < pg_num_cols($rs); $x++){
                 if( pg_num_rows($rs) >= 0 ){
@@ -29,7 +31,9 @@
 	header('Content-Type: application/json');
 	$datos = array(
 		'estado' => 'ok',
-		'username' => $rs
+		'username' => $usernames,
+        'pass' => $passwords,
+        'roles' => roles
 	);
 	echo json_encode($datos, JSON_FORCE_OBJECT);
 ?>
