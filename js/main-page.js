@@ -60,6 +60,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 });
 
+window.onload = function() {
+    document.getElementById("username").innerHTML = "Welcome " + localStorage.getItem("username") +"!";
+};
+
 window.setInterval(
     function(){
         opcion = 1;
@@ -75,10 +79,6 @@ window.setInterval(
             humidity = JSON.parse(respuesta.humidity);
             g1.refresh(temperature);
             g2.refresh(humidity);
-            var _username = localStorage.getItem("username");
-            var _pass = localStorage.getItem("password");
-            console.log("Username:" + _username);
-            console.log("Password:" + _pass);
             return 1;
         } else
             g1.refresh(0);

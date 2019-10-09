@@ -15,7 +15,7 @@
         <div class="sidebar">
             <div class="logged-user">
                 <img src="images/login-user2.svg" class="login-icon">
-                <div class="username">Welcome Jesus</div>
+                <div id="username" class="username">Welcome Jesus</div>
             </div>
             <ul>
                 <li><a href="#"><i class="fas fa-cloud"></i>T/H</a></li>
