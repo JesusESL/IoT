@@ -4,6 +4,13 @@ $(document).ready(function(){
 
         var _username = $("#username").val();
         var _pass = $("#pass").val();
+        if(_username == null){
+            document.getElementById("error_username").innerHTML = "Please enter an username";
+            return 0;
+        }else if(_pass == null){
+            document.getElementById("error_username").innerHTML = "Please enter a password";
+            return 0;
+        }
         var _rol = "";
         var users = "";
         var passwords = "";
@@ -33,9 +40,11 @@ $(document).ready(function(){
                 var flag = false;
                 while(users[i] != null){
                     if(users[i] == _username){
-                        _rol = respuesta.roles[i];
-                        flag = true;
-                        break;
+                        if(passwords[i] == _pass){
+                            _rol = respuesta.roles[i];
+                            flag = true;
+                            break;
+                        }
                     }
                     i++;
                 }
@@ -48,7 +57,7 @@ $(document).ready(function(){
                     localStorage.setItem("rol", _rol);
                     window.location.href = "../main-page.php";
                 }else {
-                    console.log("Usuario incorrecto"); 
+                    document.getElementById("error_submit").innerHTML = "Username or password incorrect";
                 }
             }
         });

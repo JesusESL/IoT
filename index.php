@@ -13,9 +13,12 @@
         <form action="php/login.php" method="POST">
             <p>Username</p>
             <input type="text" id="username" placeholder="Enter username">
+            <span id="error_username"></span>
             <p>Password</p>
             <input type="password" id="pass" placeholder="Enter password">
+            <span id="error_password"></span>
             <input type="submit" id="loginButton" value="Login">
+            <span id="error_submit"></span>
         </form>
     </div>    
 
