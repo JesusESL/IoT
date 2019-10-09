@@ -45,7 +45,7 @@ $(document).ready(function(){
                     //console.log(_username);
                     //console.log(_rol);
                     localStorage.setItem("username", _username);
-                    localStorage.setItem("password", _rol);
+                    localStorage.setItem("rol", _rol);
                     window.location.href = "../main-page.php";
                 }else {
                     console.log("Usuario incorrecto"); 
