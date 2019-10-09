@@ -4,13 +4,6 @@ $(document).ready(function(){
 
         var _username = $("#username").val();
         var _pass = $("#pass").val();
-        if(_username == null){
-            document.getElementById("error_username").innerHTML = "Please enter an username";
-            return 0;
-        }else if(_pass == null){
-            document.getElementById("error_username").innerHTML = "Please enter a password";
-            return 0;
-        }
         var _rol = "";
         var users = "";
         var passwords = "";
@@ -57,7 +50,15 @@ $(document).ready(function(){
                     localStorage.setItem("rol", _rol);
                     window.location.href = "../main-page.php";
                 }else {
-                    document.getElementById("error_submit").innerHTML = "Username or password incorrect";
+                    if(_username == null){
+                        document.getElementById("error_username").innerHTML = "Please enter an username";
+                    }
+                    if(_pass == null){
+                        document.getElementById("error_username").innerHTML = "Please enter a password";
+                    }
+                    if((_username != null) && (_pass != null)){
+                        document.getElementById("error_submit").innerHTML = "Username or password incorrect";
+                    }
                 }
             }
         });
