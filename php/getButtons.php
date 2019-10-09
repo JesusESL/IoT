@@ -33,5 +33,7 @@
         'addButton' => $addButton,
         'removeButton' => $removeButton
 	);
-	echo json_encode($datos, JSON_FORCE_OBJECT);
+    echo json_encode($datos, JSON_FORCE_OBJECT);
+    $query ="UPDATE status_buttons SET powerButton=false, addButton=false, removeButton=false WHERE id = 1";
+	pg_query($query) or die('Error: ' . pg_last_error());
 ?>
