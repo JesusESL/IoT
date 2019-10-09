@@ -29,8 +29,7 @@
 	header('Content-Type: application/json');
 	$datos = array(
 		'estado' => 'ok',
-		'username' => $username,
-		'pass' => $pass
+		'username' => $rs
 	);
 	echo json_encode($datos, JSON_FORCE_OBJECT);
 ?>
