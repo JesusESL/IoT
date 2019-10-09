@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    g1 = new JustGage({
+    var g1 = new JustGage({
         id: "g1",
         value: 0,
         valueFontColor: "#000000",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }]
         }
     });
-    g2 = new JustGage({
+    var g2 = new JustGage({
         id: "g2",
         value: 0,
         valueFontColor: "#000000",

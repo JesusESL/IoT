@@ -2,10 +2,10 @@ $(document).ready(function(){
     $('form').submit(function(event){
         event.preventDefault();
 
-        _username = $("#username").val();
-        _pass = $("#pass").val();
-        usernameDB = "";
-        passDB = "";
+        var _username = $("#username").val();
+        var _pass = $("#pass").val();
+        var usernameDB = "";
+        var passDB = "";
         
         opcion = 1;
         datos = {"Opcion":opcion};
@@ -26,6 +26,8 @@ $(document).ready(function(){
                 console.log(_pass);
                 if((usernameDB == _username) && (passDB == _pass)){
                     console.log("Usuario correcto");
+                    localStorage.setItem("username", _username);
+                    localStorage.setItem("password", _pass);
                     window.location.href = "../main-page.php";
                 } else {
                     console.log("Usuario incorrecto");
