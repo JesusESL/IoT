@@ -23,16 +23,14 @@
                 }
             }
         }*/
-    } else{
-        echo "No conexion\n";
     }
     
     $opcion = $_POST["opcion"];
 	header('Content-Type: application/json');
 	$datos = array(
 		'estado' => 'ok',
-		'username' => $usernames,
-        'pass' => $passwords,
+		'usernames' => $usernames,
+        'passwords' => $passwords,
         'roles' => $roles
 	);
 	echo json_encode($datos, JSON_FORCE_OBJECT);
