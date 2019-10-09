@@ -19,7 +19,8 @@
 				while( $obj = pg_fetch_object($rs) ){
 					$powerButton = $obj->powerButton;
 					$addButton = $obj->addButton;
-					$removeButton = $obj->removeButton;
+                    $removeButton = $obj->removeButton;
+                    console.log($rs);
 				}
 			}
 		}
