@@ -50,15 +50,7 @@ $(document).ready(function(){
                     localStorage.setItem("rol", _rol);
                     window.location.href = "../main-page.php";
                 }else {
-                    if(_username == null){
-                        document.getElementById("error_username").innerHTML = "Please enter an username";
-                    }
-                    if(_pass == null){
-                        document.getElementById("error_username").innerHTML = "Please enter a password";
-                    }
-                    if((_username != null) && (_pass != null)){
-                        document.getElementById("error_submit").innerHTML = "Username or password incorrect";
-                    }
+                    document.getElementById("error_submit").innerHTML = "Username or password incorrect";
                 }
             }
         });
