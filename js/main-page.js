@@ -74,8 +74,8 @@ window.setInterval(
             humidity = JSON.parse(respuesta.humidity);
             g1.refresh(temperature);
             g2.refresh(humidity);
-            console.log(_username);
-            console.log(_pass);
+            console.log(localStorage.getItem("username"));
+            console.log(localStorage.getItem("password"));
             return 1;
         } else
             g1.refresh(0);
