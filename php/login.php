@@ -33,7 +33,7 @@
 		'estado' => 'ok',
 		'username' => $usernames,
         'pass' => $passwords,
-        'roles' => roles
+        'roles' => $roles
 	);
 	echo json_encode($datos, JSON_FORCE_OBJECT);
 ?>
