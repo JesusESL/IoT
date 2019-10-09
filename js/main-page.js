@@ -74,21 +74,22 @@ window.setInterval(
         opcion = 1;
         datos = {"Opcion":opcion};
         $.ajax({
-        url: "../php/base_datos.php",
-        type: "POST",
-        data: datos
+            url: "../php/base_datos.php",
+            type: "POST",
+            data: datos
         }).done(function(respuesta){
-        if (respuesta.estado === "ok") {
-            console.log(JSON.stringify(respuesta));
-            temperature = JSON.parse(respuesta.temperature);
-            humidity = JSON.parse(respuesta.humidity);
-            g1.refresh(temperature);
-            g2.refresh(humidity);
-            return 1;
-        } else
-            g1.refresh(0);
-            g2.refresh(0);
-        });
+            if (respuesta.estado === "ok") {
+                console.log(JSON.stringify(respuesta));
+                temperature = JSON.parse(respuesta.temperature);
+                humidity = JSON.parse(respuesta.humidity);
+                g1.refresh(temperature);
+                g2.refresh(humidity);
+                return 1;
+            } else
+                g1.refresh(0);
+                g2.refresh(0);
+            }
+        );
     }
 ,1000);
 
@@ -97,6 +98,13 @@ $('#power').click(function() {
 
     var powerButton = $("#power").val();
     console.log(powerButton);
+    $.ajax({
+        type: "POST",
+        url: "../php/sendData.php",
+        data: { button: "power" }
+    }).done(function( msg ) {
+        alert( "Data Saved: " + msg );
+    });
 });
 
 $('#add').click(function() {
@@ -104,6 +112,13 @@ $('#add').click(function() {
     
     var powerButton = $("#add").val();
     console.log(powerButton);
+    $.ajax({
+        type: "POST",
+        url: "../php/sendData.php",
+        data: { button: "add" }
+    }).done(function( msg ) {
+        alert( "Data Saved: " + msg );
+    });
 });
 
 $('#remove').click(function() {
@@ -111,4 +126,11 @@ $('#remove').click(function() {
     
     var powerButton = $("#remove").val();
     console.log(powerButton);
+    $.ajax({
+        type: "POST",
+        url: "../php/sendData.php",
+        data: { button: "remove" }
+    }).done(function( msg ) {
+        alert( "Data Saved: " + msg );
+    });
 });
