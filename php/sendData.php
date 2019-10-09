@@ -1,8 +1,8 @@
 <?php
-    $button = $_POST["button"];
+    $_SESSION["button"] = $_POST["button"]; ;
     $datos = array(
 		'estado' => 'ok',
-		'button' => $button
+		'button' => $_SESSION["button"]
 	);
 	echo json_encode($datos, JSON_FORCE_OBJECT);
 ?>
