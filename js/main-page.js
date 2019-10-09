@@ -100,8 +100,8 @@ $('#power').click(function() {
     console.log(powerButton);
     $.ajax({
         type: "POST",
-        url: "../php/sendData.php",
-        data: { "opcion" : 1 , "button" : "power" }
+        url: "192.168.50.207",
+        data: { "button" : "power" }
     }).done(function( msg ) {
         alert( "Data Saved: " + msg );
     });
@@ -114,7 +114,7 @@ $('#add').click(function() {
     console.log(powerButton);
     $.ajax({
         type: "POST",
-        url: "../php/sendData.php",
+        url: "192.168.50.207",
         data: { button: "add" }
     }).done(function( msg ) {
         alert( "Data Saved: " + msg );
@@ -128,7 +128,7 @@ $('#remove').click(function() {
     console.log(powerButton);
     $.ajax({
         type: "POST",
-        url: "../php/sendData.php",
+        url: "192.168.50.207",
         data: { button: "remove" }
     }).done(function( msg ) {
         alert( "Data Saved: " + msg );
