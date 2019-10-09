@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     g1 = new JustGage({
         id: "g1",
-        value: 45,
+        value: 0,
         valueFontColor: "#000000",
         min: 0,
         max: 60,
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
     g2 = new JustGage({
         id: "g2",
-        value: 60,
+        value: 0,
         valueFontColor: "#000000",
         min: 0,
         max: 100,
@@ -74,6 +74,8 @@ window.setInterval(
             humidity = JSON.parse(respuesta.humidity);
             g1.refresh(temperature);
             g2.refresh(humidity);
+            console.log(_username);
+            console.log(_pass);
             return 1;
         } else
             g1.refresh(0);
