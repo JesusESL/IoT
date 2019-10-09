@@ -94,7 +94,7 @@ window.setInterval(
 ,1000);
 
 $('#power').click(function() {
-    event.preventDefault();
+    //event.preventDefault();
 
     var powerButton = $("#power").val();
     console.log(powerButton);
