@@ -7,14 +7,11 @@
     $conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
     $conexion = pg_connect($conn_string);
 
-    $usernames = array();
-    $passwords = array();
-
     if($conexion) {
         $sql = "SELECT * FROM users";
         $rs = pg_query( $conexion, $sql );
         console.log($rs);
-        if( $rs ){
+        /*if( $rs ){
             for ($x = 0; $x < pg_num_cols($rs); $x++){
                 if( pg_num_rows($rs) >= 0 ){
                     while( $obj = pg_fetch_object($rs) ){
@@ -23,7 +20,9 @@
                     }
                 }
             }
-        }
+        }*/
+    } else{
+        echo "No conexion\n";
     }
     
     $opcion = $_POST["opcion"];
