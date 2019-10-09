@@ -60,10 +60,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 });
 
-window.onload = function() {
-    document.getElementById("username").innerHTML = "Welcome " + localStorage.getItem("username") +"!";
-};
-
 window.setInterval(
     function(){
         opcion = 1;
