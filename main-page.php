@@ -37,7 +37,7 @@
                     <div id="g2" class="gauge"></div>
                 </div>
                 <br>
-                <form class="buttons" action="sendData.php" method="POST">
+                <form class="buttons" action="php/sendData.php" method="POST">
                     <button id="power" class="waves-effect waves-light btn-large" value="1"><i class="large material-icons">power_settings_new</i></button>
                     <button id="add" class="waves-effect waves-light btn-large" value="2"><i class="material-icons">add</i></button>
                     <button id="remove" class="waves-effect waves-light btn-large" value="3"><i class="material-icons">remove</i></button>
