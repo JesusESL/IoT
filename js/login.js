@@ -17,17 +17,17 @@ $(document).ready(function(){
             data: datos
         }).done(function(respuesta){
             if (respuesta.estado === "ok") {
-                console.log(JSON.stringify(respuesta))
+                //console.log(JSON.stringify(respuesta))
                 users = respuesta.usernames;
                 passwords = respuesta.passwords;
                 roles = respuesta.roles;
-                console.log("DB");
-                console.log(users);
-                console.log(passwords);
-                console.log(roles);
-                console.log("Form");
-                console.log(_username);
-                console.log(_pass);
+                //console.log("DB");
+                //console.log(users);
+                //console.log(passwords);
+                //console.log(roles);
+                //console.log("Form");
+                //console.log(_username);
+                //console.log(_pass);
 
                 var i = 0;
                 var flag = false;
@@ -42,20 +42,14 @@ $(document).ready(function(){
 
                 if(flag){
                     console.log("Usuario correcto");
-                    console.log(_username);
-                    console.log(_rol);
+                    //console.log(_username);
+                    //console.log(_rol);
+                    localStorage.setItem("username", _username);
+                    localStorage.setItem("password", _rol);
+                    window.location.href = "../main-page.php";
                 }else {
                     console.log("Usuario incorrecto"); 
                 }
-
-                /*if((usernameDB == _username) && (passDB == _pass)){
-                    console.log("Usuario correcto");
-                    localStorage.setItem("username", _username);
-                    localStorage.setItem("password", _pass);
-                    //window.location.href = "../main-page.php";
-                } else {
-                    console.log("Usuario incorrecto");
-                }*/
             }
         });
     });
