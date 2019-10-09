@@ -2,10 +2,10 @@ $(document).ready(function(){
     $('form').submit(function(event){
         event.preventDefault();
 
-        var _username = $("#username").val();
-        var _pass = $("#pass").val();
-        var usernameDB = "";
-        var passDB = "";
+        _username = $("#username").val();
+        _pass = $("#pass").val();
+        usernameDB = "";
+        passDB = "";
         
         opcion = 1;
         datos = {"Opcion":opcion};
