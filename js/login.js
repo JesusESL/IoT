@@ -16,7 +16,7 @@ $(document).ready(function(){
         }).done(function(respuesta){
             if (respuesta.estado === "ok") {
                 console.log(JSON.stringify(respuesta))
-                usernameDB = respuesta.username;
+                /*usernameDB = respuesta.username;
                 passDB = respuesta.pass;
                 console.log("DB");
                 console.log(usernameDB);
@@ -31,7 +31,7 @@ $(document).ready(function(){
                     //window.location.href = "../main-page.php";
                 } else {
                     console.log("Usuario incorrecto");
-                }
+                }*/
             }
         });
     });

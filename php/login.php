@@ -11,8 +11,9 @@
     $passwords = array();
 
     if($conexion) {
-        $sql = "SELECT * FROM users WHERE id=1";
+        $sql = "SELECT * FROM users";
         $rs = pg_query( $conexion, $sql );
+        console.log($rs);
         if( $rs ){
             for ($x = 0; $x < pg_num_cols($rs); $x++){
                 if( pg_num_rows($rs) >= 0 ){
