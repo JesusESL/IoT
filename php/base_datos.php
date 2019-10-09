@@ -33,4 +33,5 @@
 		'date' => $date
 	);
 	echo json_encode($datos, JSON_FORCE_OBJECT);
+	pg_close($conexion);
 ?>
