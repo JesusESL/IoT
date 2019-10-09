@@ -14,7 +14,7 @@
 		echo "Conexion exitosa!!\n";
 	}
 
-	$button = $_POST["button"]
+	$button = $_POST["button"];
     console.log($button);
 	/*if($button == "power"){
 		$query ="UPDATE status_buttons SET powerButton=true, addButton=false, removeButton=false WHERE id = 1";
