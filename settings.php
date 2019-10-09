@@ -42,6 +42,7 @@
                     <br>
                     <input type="text" id="role" placeholder="Enter role">
                 </div>
+                <input type="submit" id="loginButton" value="Create user">
             </div>
         </div>
     </div>
