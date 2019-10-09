@@ -17,10 +17,9 @@
 		if( $rs ){
 			if( pg_num_rows($rs) >= 0 ){
 				while( $obj = pg_fetch_object($rs) ){
-					$powerButton = $obj->powerButton;
-					$addButton = $obj->addButton;
-                    $removeButton = $obj->removeButton;
-                    console.log($rs);
+					$powerButton = $obj->powerbutton;
+					$addButton = $obj->addbutton;
+                    $removeButton = $obj->removebutton;
 				}
 			}
 		}
