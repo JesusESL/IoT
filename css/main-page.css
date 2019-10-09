@@ -106,10 +106,10 @@
     height: 400px;
 }
 
-.wrapper .content .info .buttons a{
+.wrapper .content .info .buttons button{
     margin: 15px;
 }
 
-.wrapper .content .info .buttons a i{
+.wrapper .content .info .buttons button i{
     font-size: 2rem;
 }

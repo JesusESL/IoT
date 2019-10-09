@@ -91,3 +91,24 @@ window.setInterval(
         });
     }
 ,1000);
+
+$('#power').click(function() {
+    event.preventDefault();
+
+    var powerButton = $("#power").val();
+    console.log(powerButton);
+});
+
+$('#add').click(function() {
+    event.preventDefault();
+    
+    var powerButton = $("#add").val();
+    console.log(powerButton);
+});
+
+$('#remove').click(function() {
+    event.preventDefault();
+    
+    var powerButton = $("#remove").val();
+    console.log(powerButton);
+});
