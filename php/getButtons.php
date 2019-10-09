@@ -7,18 +7,19 @@
 	$conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
 	$conexion = pg_connect($conn_string);
 
-	$temperature = 0;
-	$humidity = 0;
+	$powerButton = false;
+    $addButton = false;
+    $removeButton = false;
 
 	if($conexion) {
-		$sql = "SELECT * FROM iot_table WHERE id=1";
+		$sql = "SELECT * FROM status_buttons WHERE id=1";
 		$rs = pg_query( $conexion, $sql );
 		if( $rs ){
 			if( pg_num_rows($rs) >= 0 ){
 				while( $obj = pg_fetch_object($rs) ){
-					$temperature = $obj->temperature;
-					$humidity = $obj->humidity;
-					$date = $obj->date;
+					$powerButton = $obj->powerButton;
+					$addButton = $obj->addButton;
+					$removeButton = $obj->removeButton;
 				}
 			}
 		}
@@ -28,9 +29,9 @@
 	header('Content-Type: application/json');
 	$datos = array(
 		'estado' => 'ok',
-		'temperature' => $temperature,
-		'humidity' => $humidity,
-		'date' => $date
+        'powerButton' => $powerButton,
+        'addButton' => $addButton,
+        'removeButton' => $removeButton
 	);
 	echo json_encode($datos, JSON_FORCE_OBJECT);
 ?>
