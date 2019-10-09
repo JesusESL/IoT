@@ -20,7 +20,7 @@
 		$query ="UPDATE status_buttons SET powerButton=true, addButton=false, removeButton=false WHERE id = 1";
 		pg_query($query) or die('Error: ' . pg_last_error());
 		echo "Dato Actualizado";
-	}/* else if($button == "add"){
+	} else if($button == "add"){
 		$query ="UPDATE status_buttons SET powerButton=false, addButton=true, removeButton=false WHERE id = 1";
 		pg_query($query) or die('Error: ' . pg_last_error());
 		echo "Dato Actualizado";
@@ -32,7 +32,7 @@
         $query = "UPDATE status_buttons SET powerButton=false, addButton=false, removeButton=false WHERE id = 1";
 		pg_query($query) or die('Error: ' . pg_last_error());
 		echo "Dato Actualizado";
-    }*/
+    }
 	pg_close($dbconn);
 ?>
 
