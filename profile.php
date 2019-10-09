@@ -24,24 +24,7 @@
             </ul>
         </div>
         <div class="content">
-            <div class="header">Temperature and Humidity</div>
-            <div class="info">
-                <div class="chart">
-                    <p class="sensor_name">Temperature</p>
-                    <div id="g1" class="gauge"></div>
-                </div>
-            
-                <div class="chart">
-                    <p class="sensor_name">Humidity</p>
-                    <div id="g2" class="gauge"></div>
-                </div>
-                <br>
-                <div class="buttons">
-                    <a id="power" class="waves-effect waves-light btn-large"><i class="large material-icons">power_settings_new</i></a>
-                    <a id="add" class="waves-effect waves-light btn-large"><i class="material-icons">add</i></a>
-                    <a id="remove" class="waves-effect waves-light btn-large"><i class="material-icons">remove</i></a>
-                </div>
-            </div>
+            <div class="header">Profile</div>
         </div>
     </div>
     
