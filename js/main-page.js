@@ -1,5 +1,6 @@
+var g1, g2;
 document.addEventListener("DOMContentLoaded", function(event) {
-    var g1 = new JustGage({
+    g1 = new JustGage({
         id: "g1",
         value: 0,
         valueFontColor: "#000000",
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }]
         }
     });
-    var g2 = new JustGage({
+    g2 = new JustGage({
         id: "g2",
         value: 0,
         valueFontColor: "#000000",
@@ -74,8 +75,10 @@ window.setInterval(
             humidity = JSON.parse(respuesta.humidity);
             g1.refresh(temperature);
             g2.refresh(humidity);
-            console.log(localStorage.getItem("username"));
-            console.log(localStorage.getItem("password"));
+            var _username = localStorage.getItem("username");
+            var _pass = localStorage.getItem("password");
+            console.log("Username:" + _username);
+            console.log("Password:" + _pass);
             return 1;
         } else
             g1.refresh(0);
