@@ -30,6 +30,8 @@ window.setInterval(
       }).done(function(respuesta){
           console.log(JSON.stringify(respuesta));
           var data = JSON.stringify(respuesta);
+          console.log(data);
+          console.log(data[1]);
           delete data[0];
           for (var i = 1; i < 4; i++) {
             console.log(data[i]['id']);
@@ -37,4 +39,4 @@ window.setInterval(
         }
       );
   }
-,1000);
+,5000);
