@@ -31,11 +31,11 @@ window.setInterval(
           console.log(JSON.stringify(respuesta));
           var data = JSON.stringify(respuesta);
           console.log(data);
-          console.log(data[1]);
+          console.log(data[1]["id"]);
           delete data[0];
-          for (var i = 1; i < 4; i++) {
+          /*for (var i = 1; i < 4; i++) {
             console.log(data[i]['id']);
-          }
+          }*/
         }
       );
   }
