@@ -7,7 +7,14 @@
 	$conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
 	$conexion = pg_connect($conn_string);
 
-	$objects[] = 0;
+  if(!$conexion) {
+		echo "Error: No se ha podido conectar a la base de datos\n";
+	} 
+	else {
+		echo "Conexion exitosa!!\n";
+  }
+  
+	$objects = 0;
 
 	if($conexion) {
 		$sql = "SELECT * FROM iot_table WHERE id=1";
@@ -39,5 +46,5 @@
 
 	$opcion = $_POST["opcion"];
 	header('Content-Type: application/json');
-	echo json_encode($datos, JSON_FORCE_OBJECT);
+	echo json_encode($objects, JSON_FORCE_OBJECT);
 ?>
