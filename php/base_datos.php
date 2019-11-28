@@ -7,7 +7,7 @@
 	$conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
 	$conexion = pg_connect($conn_string);
 
-	$data = 0;
+	$data[] = 0;
 
 	if($conexion) {
 		$sql = "SELECT * FROM iot_table";
@@ -29,7 +29,6 @@
 			}
 		}
 	} 
-
 	$opcion = $_POST["opcion"];
 	header('Content-Type: application/json');
 	echo json_encode($data, JSON_FORCE_OBJECT);
