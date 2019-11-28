@@ -5,7 +5,7 @@ window.setInterval(
 
       datos = {"Opcion":opcion};
       $.ajax({
-          url: "../php/ssensorData.php",
+          url: "../php/sensorData.php",
           type: "POST",
           data: datos
       }).done(function(respuesta){
