@@ -26,14 +26,35 @@ window.setInterval(
           delete data[0];
           //circle.setMap(null);
           for(var i in data){
-            var cityCircle = new google.maps.Circle({
-              strokeColor: '#00FF00',
-              strokeWeight: 3,
-              fillColor: '#00FF00',
-              map: map,
-              center: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
-              radius: 10
-            });
+            if(parseFloat(data[i]["temperature"]) > 30){
+              var redCircle = new google.maps.Circle({
+                strokeColor: '#FF0000',
+                strokeWeight: 3,
+                fillColor: '#FF0000',
+                map: map,
+                center: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
+                radius: 4
+              });
+            } else if((parseFloat(data[i]["temperature"]) < 30) && parseFloat(data[i]["temperature"]) > 20){
+              var yellowCircle = new google.maps.Circle({
+                strokeColor: '#F0FF00',
+                strokeWeight: 3,
+                fillColor: '#F0FF00',
+                map: map,
+                center: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
+                radius: 4
+              });  
+            } else{
+              var greenCircle = new google.maps.Circle({
+                strokeColor: '#00FF00',
+                strokeWeight: 3,
+                fillColor: '#00FF00',
+                map: map,
+                center: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
+                radius: 4
+              });    
+            }
+
           }
         }
       );
