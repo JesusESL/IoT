@@ -26,8 +26,8 @@
 						'temperature' => $temperature,
 						'humidity' => $humidity,
 						'date' => $date,
-						'date' => $latitude,
-						'date' => $longitude
+						'latitude' => $latitude,
+						'longitude' => $longitude
 					);
 					array_push($data, $datos);
 				}
