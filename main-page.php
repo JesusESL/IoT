@@ -21,6 +21,7 @@
                 <li><a href="main-page.php"><i class="fas fa-cloud"></i>T/H</a></li>
                 <li><a href="profile.php"><i class="fas fa-user"></i>Profile</a></li>
                 <li><a href="settings.php"><i class="fas fa-cog"></i>Settings</a></li>
+                <li><a href="map.php"><i class="fas fa-cog"></i>Map</a></li>
                 <li><a href="index.php" onclick="return logOut();"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
             </ul>
         </div>
@@ -37,7 +38,7 @@
                     <div id="g2" class="gauge"></div>
                 </div>
                 <br>
-                <form class="buttons" action="../php/sendData.php" method="POST">
+                <form class="buttons" action="sendData.php" method="POST">
                     <button id="power" class="waves-effect waves-light btn-large" value="power"><i class="large material-icons">power_settings_new</i></button>
                     <button id="add" class="waves-effect waves-light btn-large" value="add"><i class="material-icons">add</i></button>
                     <button id="remove" class="waves-effect waves-light btn-large" value="remove"><i class="material-icons">remove</i></button>
