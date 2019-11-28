@@ -22,7 +22,9 @@ window.setInterval(
       }).done(function(respuesta){
           var data = respuesta
           delete data[0];
-          map.setMap(null);
+          redCircle.setMap(null);
+          yellowCircle.setMap(null);
+          greenCircle.setMap(null);
           for(var i in data){
             if(parseFloat(data[i]["temperature"]) > 30){
               var redCircle = new google.maps.Circle({
