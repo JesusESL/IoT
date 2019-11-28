@@ -7,14 +7,6 @@ function initMap() {
     mapTypeId: 'satellite',
     
   });
-  var cityCircle = new google.maps.Circle({
-    strokeColor: '#00FF00',
-    strokeWeight: 3,
-    fillColor: '#00FF00',
-    map: map,
-    center: {lat: 21.048379, lng: -89.644755},
-    radius: 3
-  });
 }
 
 window.setInterval(
@@ -33,6 +25,15 @@ window.setInterval(
           console.log(data);
           console.log(data["1"]["id"]);
           delete data[0];
+
+          var cityCircle = new google.maps.Circle({
+            strokeColor: '#00FF00',
+            strokeWeight: 3,
+            fillColor: '#00FF00',
+            map: map,
+            center: {lat: data["1"]["latitude"], lng: data["1"]["longitude"]},
+            radius: 10
+          });
           /*for (var i = 1; i < 4; i++) {
             console.log(data[i]['id']);
           }*/
