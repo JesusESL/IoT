@@ -15,11 +15,13 @@
 		if( $rs ){
 			if( pg_num_rows($rs) >= 0 ){
 				while( $obj = pg_fetch_object($rs) ){
+					$id = $obj->id;
 					$temperature = $obj->temperature;
 					$humidity = $obj->humidity;
 					$date = $obj->date;
 					$datos = array(
 						'estado' => 'ok',
+						'id' => $id,
 						'temperature' => $temperature,
 						'humidity' => $humidity,
 						'date' => $date
