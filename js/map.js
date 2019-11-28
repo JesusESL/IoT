@@ -20,11 +20,9 @@ window.setInterval(
           type: "POST",
           data: datos
       }).done(function(respuesta){
-          //console.log(JSON.stringify(respuesta));
           var data = respuesta
-          //console.log(data);
           delete data[0];
-          circle.setMap(null);
+          map.setMap(null);
           for(var i in data){
             if(parseFloat(data[i]["temperature"]) > 30){
               var redCircle = new google.maps.Circle({
