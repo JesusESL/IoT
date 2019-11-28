@@ -16,7 +16,7 @@
   
 	$objects = 0;
 
-	if($conexion) {
+	/*if($conexion) {
 		$sql = "SELECT * FROM iot_table WHERE id=1";
 		$rs = pg_query( $conexion, $sql );
 		if( $rs ){
@@ -42,7 +42,7 @@
 				}
 			}
 		}
-	} 
+	}*/ 
 
 	$opcion = $_POST["opcion"];
 	header('Content-Type: application/json');
