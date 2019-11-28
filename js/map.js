@@ -27,7 +27,7 @@ window.setInterval(
           //circle.setMap(null);
           for(var i in data){
             console.log(data);
-            console.log(data[i])
+            console.log(data[i]["latitude"]);
             /*var cityCircle = new google.maps.Circle({
               strokeColor: '#00FF00',
               strokeWeight: 3,
