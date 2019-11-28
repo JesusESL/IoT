@@ -1,4 +1,8 @@
 var map;
+var redCircle = new google.maps.Circle();
+var yellowCircle = new google.maps.Circle()
+var greenCircle = new google.maps.Circle()
+var marker;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -11,8 +15,6 @@ function initMap() {
 
 window.setInterval(
   function(){
-      opcion = 1;
-      temperature = null;
 
       datos = {"Opcion":opcion};
       $.ajax({
@@ -27,7 +29,7 @@ window.setInterval(
           greenCircle.setMap(null);
           for(var i in data){
             if(parseFloat(data[i]["temperature"]) > 30){
-              var redCircle = new google.maps.Circle({
+              redCircle = new google.maps.Circle({
                 strokeColor: '#FF0000',
                 strokeWeight: 3,
                 fillColor: '#FF0000',
@@ -35,13 +37,13 @@ window.setInterval(
                 center: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
                 radius: 4
               });
-              var marker = new google.maps.Marker({
+              marker = new google.maps.Marker({
                 position: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
                 map: map,
                 title: data[i]["id"]
               });
             } else if((parseFloat(data[i]["temperature"]) < 30) && parseFloat(data[i]["temperature"]) > 20){
-              var yellowCircle = new google.maps.Circle({
+              yellowCircle = new google.maps.Circle({
                 strokeColor: '#F0FF00',
                 strokeWeight: 3,
                 fillColor: '#F0FF00',
@@ -49,13 +51,13 @@ window.setInterval(
                 center: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
                 radius: 4
               });
-              var marker = new google.maps.Marker({
+              marker = new google.maps.Marker({
                 position: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
                 map: map,
                 title: data[i]["id"]
               });  
             } else{
-              var greenCircle = new google.maps.Circle({
+              greenCircle = new google.maps.Circle({
                 strokeColor: '#00FF00',
                 strokeWeight: 3,
                 fillColor: '#00FF00',
@@ -63,7 +65,7 @@ window.setInterval(
                 center: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
                 radius: 4
               }); 
-              var marker = new google.maps.Marker({
+              marker = new google.maps.Marker({
                 position: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
                 map: map,
                 title: data[i]["id"]
