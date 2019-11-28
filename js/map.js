@@ -1,6 +1,8 @@
 var map;
 var sensor1;
 var marker;
+var flag = false;
+var sensor;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -24,14 +26,20 @@ window.setInterval(
 
           for(var i in data){
             if(parseFloat(data[i]["temperature"]) > 30){
-              var sensor = new google.maps.Circle({
-                strokeColor: '#FF0000',
-                strokeWeight: 3,
-                fillColor: '#FF0000',
-                map: map,
-                center: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
-                radius: 4
-              });
+              if(flag == false){
+                sensor = new google.maps.Circle({
+                  strokeColor: '#FF0000',
+                  strokeWeight: 3,
+                  fillColor: '#FF0000',
+                  map: map,
+                  center: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
+                  radius: 4
+                });
+                flag = true;
+              } else{
+                sensor.set('map', 'null');
+              }
+              
             } else if((parseFloat(data[i]["temperature"]) < 30) && parseFloat(data[i]["temperature"]) > 20){
               var sensor = new google.maps.Circle({
                 strokeColor: '#F0FF00',
