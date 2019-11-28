@@ -24,7 +24,7 @@ window.setInterval(
           var data = respuesta
           //console.log(data);
           delete data[0];
-          //circle.setMap(null);
+          circle.setMap(null);
           for(var i in data){
             if(parseFloat(data[i]["temperature"]) > 30){
               var redCircle = new google.maps.Circle({
