@@ -19,6 +19,7 @@
 					$temperature = $obj->temperature;
 					$humidity = $obj->humidity;
 					$date = $obj->date;
+					console.log($obj);
 				}
 			}
 		}
