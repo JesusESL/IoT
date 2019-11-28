@@ -40,26 +40,6 @@
 
   <body>
     <div id="map"></div>
-    <script>
-      var map;
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 19,
-          center: {lat: 21.047688, lng: -89.644690},
-          mapTypeId: 'satellite',
-          
-        });
-        var cityCircle = new google.maps.Circle({
-          strokeColor: '#00FF00',
-          strokeWeight: 3,
-          fillColor: '#00FF00',
-          map: map,
-          center: {lat: 21.048379, lng: -89.644755},
-          radius: 3
-        });
-      }
-    </script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsqd1-ksda8OLf60IgmrfTknNNJAGdhN0&libraries=visualization&callback=initMap">
     </script>
