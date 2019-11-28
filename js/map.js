@@ -31,7 +31,7 @@ window.setInterval(
               strokeWeight: 3,
               fillColor: '#00FF00',
               map: map,
-              center: {lat: parseFloat(data[i]["latitude"]).toFixed(6), lng: parseFloat(data[i]["longitude"]).toFixed(6)},
+              center: {lat: parseFloat(data[i]["latitude"]), lng: parseFloat(data[i]["longitude"])},
               radius: 10
             });
           }
