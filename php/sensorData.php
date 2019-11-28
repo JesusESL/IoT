@@ -17,18 +17,18 @@
 	$objects = 0;
 
 	if($conexion) {
-		$sql = "SELECT * FROM iot_table WHERE id=1";
+		$sql = "SELECT * FROM iot_table";
 		$rs = pg_query( $conexion, $sql );
 		if( $rs ){
 			if( pg_num_rows($rs) >= 0 ){
 				while( $obj = pg_fetch_object($rs) ){
-					$id = $obj->id
+					$id = $obj->id;
 					$temperature = $obj->temperature;
 					$humidity = $obj->humidity;
 					$date = $obj->date;
 					$latitude = $obj->date;
           $longitude = $obj->longitude;
-          $sensor = array(
+          /*$sensor = array(
             'estado' => 'ok',
             'id' => $id,
             'temperature' => $temperature,
@@ -36,8 +36,13 @@
             'date' => $date,
             'latitude' => $latitude,
             'longitude' => $longitude
-          );
-          console.log($sensor);
+          );*/
+          console.log($id);
+          console.log($temperature);
+          console.log($humidity);
+          console.log($date);
+          console.log($latitude);
+          console.log($longitude);
           //array_push($objects, $sensor);
 				}
 			}
