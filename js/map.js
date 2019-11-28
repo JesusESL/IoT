@@ -29,7 +29,7 @@ window.setInterval(
           data: datos
       }).done(function(respuesta){
           //console.log(JSON.stringify(respuesta));
-          var data = JSON.stringify(respuesta);
+          var data = respuesta
           console.log(data);
           console.log(data["1"]["id"]);
           delete data[0];
