@@ -22,12 +22,12 @@
 		if( $rs ){
 			if( pg_num_rows($rs) >= 0 ){
 				while( $obj = pg_fetch_object($rs) ){
-					$temperature = $obj->temperature;
+					/*$temperature = $obj->temperature;
 					$humidity = $obj->humidity;
 					$date = $obj->date;
 					$latitude = $obj->date;
           $longitude = $obj->longitude;
-          /*$sensor = array(
+          $sensor = array(
             'estado' => 'ok',
             'id' => $id,
             'temperature' => $temperature,
@@ -36,12 +36,8 @@
             'latitude' => $latitude,
             'longitude' => $longitude
           );*/
-          console.log($id);
-          console.log($temperature);
-          console.log($humidity);
-          console.log($date);
-          console.log($latitude);
-          console.log($longitude);
+          console.log($rs);
+          
           //array_push($objects, $sensor);
 				}
 			}
