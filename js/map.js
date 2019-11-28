@@ -22,20 +22,20 @@ window.setInterval(
       }).done(function(respuesta){
           //console.log(JSON.stringify(respuesta));
           var data = respuesta
-          console.log(data);
-          console.log(data["1"]["id"]);
+          //console.log(data);
           delete data[0];
           circle.setMap(null);
           for(var i in data){
-            console.log(i);
-            var cityCircle = new google.maps.Circle({
+            console.log(data);
+            console.log(data[i])
+            /*var cityCircle = new google.maps.Circle({
               strokeColor: '#00FF00',
               strokeWeight: 3,
               fillColor: '#00FF00',
               map: map,
               center: {lat: parseInt(data[i]["latitude"]), lng: parseInt(data[i]["longitude"])},
               radius: 3
-            });
+            });*/
           }
         }
       );
