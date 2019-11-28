@@ -7,8 +7,7 @@
 	$conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
 	$conexion = pg_connect($conn_string);
 
-	$temperature = 0;
-	$humidity = 0;
+	$data = 0;
 
 	if($conexion) {
 		$sql = "SELECT * FROM iot_table";
@@ -19,7 +18,13 @@
 					$temperature = $obj->temperature;
 					$humidity = $obj->humidity;
 					$date = $obj->date;
-					console.log($obj);
+					$datos = array(
+						'estado' => 'ok',
+						'temperature' => $temperature,
+						'humidity' => $humidity,
+						'date' => $date
+					);
+					array_push($data, $datos);
 				}
 			}
 		}
@@ -27,11 +32,5 @@
 
 	$opcion = $_POST["opcion"];
 	header('Content-Type: application/json');
-	$datos = array(
-		'estado' => 'ok',
-		'temperature' => $temperature,
-		'humidity' => $humidity,
-		'date' => $date
-	);
-	echo json_encode($datos, JSON_FORCE_OBJECT);
+	echo json_encode($data, JSON_FORCE_OBJECT);
 ?>
