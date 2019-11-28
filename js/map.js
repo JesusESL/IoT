@@ -26,16 +26,14 @@ window.setInterval(
           delete data[0];
           //circle.setMap(null);
           for(var i in data){
-            console.log(data);
-            console.log(data[i]["latitude"]);
-            /*var cityCircle = new google.maps.Circle({
+            var cityCircle = new google.maps.Circle({
               strokeColor: '#00FF00',
               strokeWeight: 3,
               fillColor: '#00FF00',
               map: map,
               center: {lat: parseInt(data[i]["latitude"]), lng: parseInt(data[i]["longitude"])},
-              radius: 3
-            });*/
+              radius: 10
+            });
           }
         }
       );
