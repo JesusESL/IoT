@@ -32,7 +32,7 @@ window.setInterval(
             fillColor: '#00FF00',
             map: map,
             center: {lat: data["1"]["latitude"], lng: data["1"]["longitude"]},
-            radius: 10
+            radius: 100
           });
           /*for (var i = 1; i < 4; i++) {
             console.log(data[i]['id']);
