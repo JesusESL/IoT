@@ -1,7 +1,7 @@
 var map;
-var redCircle = new google.maps.Circle();
-var yellowCircle = new google.maps.Circle()
-var greenCircle = new google.maps.Circle()
+var redCircle;
+var yellowCircle;
+var greenCircle;
 var marker;
 
 function initMap() {
@@ -24,9 +24,7 @@ window.setInterval(
       }).done(function(respuesta){
           var data = respuesta
           delete data[0];
-          redCircle.setMap(null);
-          yellowCircle.setMap(null);
-          greenCircle.setMap(null);
+          redCircle.set('map', null);
           for(var i in data){
             if(parseFloat(data[i]["temperature"]) > 30){
               redCircle = new google.maps.Circle({
