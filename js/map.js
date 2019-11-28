@@ -28,12 +28,12 @@ window.setInterval(
           type: "POST",
           data: datos
       }).done(function(respuesta){
-        console.log(JSON.stringify(respuesta));
-        delete respuesta[0];
-        var data = JSON.stringify(respuesta);
-        for (var i = 1; i < data.length+1; i++) {
-          console.log(data[i]["id"]);
-        }
+          console.log(JSON.stringify(respuesta));
+          var data = JSON.stringify(respuesta);
+          delete data[0];
+          for (var i = 1; i < 4; i++) {
+            console.log(data[i]['id']);
+          }
         }
       );
   }
