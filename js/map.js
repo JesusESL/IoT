@@ -31,7 +31,7 @@ window.setInterval(
             strokeWeight: 3,
             fillColor: '#00FF00',
             map: map,
-            center: {lat: data["1"]["latitude"], lng: data["1"]["longitude"]},
+            center: {lat: parseInt(data["1"]["latitude"]), lng: parseInt(data["1"]["longitude"])},
             radius: 100
           });
           /*for (var i = 1; i < 4; i++) {
