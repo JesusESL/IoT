@@ -19,12 +19,15 @@
 					$temperature = $obj->temperature;
 					$humidity = $obj->humidity;
 					$date = $obj->date;
+					$latitude = $obj->latitude;
+					$longitude = $obj->longitude;
 					$datos = array(
-						'estado' => 'ok',
 						'id' => $id,
 						'temperature' => $temperature,
 						'humidity' => $humidity,
-						'date' => $date
+						'date' => $date,
+						'date' => $latitude,
+						'date' => $longitude
 					);
 					array_push($data, $datos);
 				}
