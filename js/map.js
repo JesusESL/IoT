@@ -26,13 +26,14 @@ window.setInterval(
           console.log(data["1"]["id"]);
           delete data[0];
           circle.setMap(null);
-          for(var i = 1; i < 5; i++){
+          for(var i in data){
+            console.log(i);
             var cityCircle = new google.maps.Circle({
               strokeColor: '#00FF00',
               strokeWeight: 3,
               fillColor: '#00FF00',
               map: map,
-              center: {lat: parseInt(data[i.toString]["latitude"]), lng: parseInt(data[i.toString]["longitude"])},
+              center: {lat: parseInt(data[]["latitude"]), lng: parseInt(data[i]["longitude"])},
               radius: 3
             });
           }
