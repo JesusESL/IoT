@@ -11,16 +11,10 @@
 	$humidity = 0;
 
 	if($conexion) {
-		$sql = "SELECT * FROM iot_table WHERE id=1";
+		$sql = "SELECT * FROM iot_table";
 		$rs = pg_query( $conexion, $sql );
 		if( $rs ){
-			if( pg_num_rows($rs) >= 0 ){
-				while( $obj = pg_fetch_object($rs) ){
-					$temperature = $obj->temperature;
-					$humidity = $obj->humidity;
-					$date = $obj->date;
-				}
-			}
+			console.log($rs);
 		}
 	} 
 
