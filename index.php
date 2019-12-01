@@ -66,13 +66,13 @@
                                 Menu
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                                <a class="nav-link" href="index.php"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="map.html"><i class="fas fa-fw fa-map-marker-alt"></i>Google Maps</a>
+                                <a class="nav-link" href="map.php"><i class="fas fa-fw fa-map-marker-alt"></i>Google Maps</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="settings.html"><i class="fas fa-cog mr-2"></i>Settings</a>
+                                <a class="nav-link" href="settings.php"><i class="fas fa-cog mr-2"></i>Settings</a>
                             </li>
                         </ul>
                     </div>
