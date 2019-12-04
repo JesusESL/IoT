@@ -20,6 +20,17 @@ $(function() {
 
 window.setInterval(
     function(){
+
+        opcion = 1;
+        datos = {"Opcion":opcion};
+        $.ajax({
+            url: "../php/getData.php",
+            type: "POST",
+            data: datos
+        }).done(function(respuesta){
+            console.log(JSON.stringify(respuesta));
+        });
+
         if(!response){
             for(var i = 0; i < dataSize; i++){
                 var marker = map.addMarker({

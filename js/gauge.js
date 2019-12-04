@@ -92,6 +92,14 @@ $('tr').click(function(e) {
 
 
 window.setInterval(function(){
-    
+    opcion = 1;
+    datos = {"Opcion":opcion};
+    $.ajax({
+        url: "../php/getData.php",
+        type: "POST",
+        data: datos
+    }).done(function(respuesta){
+        console.log(JSON.stringify(respuesta));
+    });
 },1000)
 
