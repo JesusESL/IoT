@@ -58,13 +58,13 @@
                                 Menu
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                                <a class="nav-link" href="index.php"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="map.html"><i class="fas fa-fw fa-map-marker-alt"></i>Google Maps</a>
+                                <a class="nav-link" href="map.php"><i class="fas fa-fw fa-map-marker-alt"></i>Google Maps</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="settings.html"><i class="fas fa-cog mr-2"></i>Settings</a>
+                                <a class="nav-link" href="settings.php"><i class="fas fa-cog mr-2"></i>Settings</a>
                             </li>
                         </ul>
                     </div>
@@ -85,14 +85,14 @@
                 <div class="row">
                     <div class="col">
                         <div class="card">
-                            <h5 class="card-header" id="Map">Map</h5>
+                            <h5 class="card-header">Map</h5>
                             <div class="card-body">
                                 <div class="row justify-content-start">
                                     <div class="col-2">
-                                        <a href="#Map" id="changeTemperature" class="btn btn-primary m-b-20">Temperature</a>
+                                        <a href="" id="" class="btn btn-primary m-b-20">Temperature</a>
                                     </div>
                                     <div class="col-2">
-                                        <a href="#Map" id="changeHumidity" class="btn btn-primary m-b-20">Humidity</a>
+                                        <a href="" id="" class="btn btn-primary m-b-20">Humidity</a>
                                     </div>
                                 </div>
                                 <div id="map" class="gmaps"></div>
