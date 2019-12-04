@@ -92,7 +92,3 @@ $('tr').click(function(e) {
  });
 
 
-window.setInterval(function(){
-    console.log("Testing");
-},1000)
-
