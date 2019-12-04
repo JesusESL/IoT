@@ -43,7 +43,7 @@ window.setInterval(
                 humidity.push(data[i]["humidity"]);
             }
         });
-
+        console.log(id);
         if(!response){
             for(var i = 0; i < dataSize; i++){
                 var marker = map.addMarker({
@@ -84,7 +84,7 @@ window.setInterval(
             response = true;
         }
     }
-,5000);
+,1000);
 
 $('#changeTemperature').click(function() {
     for(var i = 0; i < dataSize; i++){
