@@ -2,6 +2,7 @@ var map;
 var circles = [];
 var markers = [];
 var response = false;
+var ready = false;
 var dataSize = 0;
 var lat = [];
 var lng = [];
@@ -42,9 +43,10 @@ window.setInterval(
                 temperature.push(data[i]["temperature"]);
                 humidity.push(data[i]["humidity"]);
             }
+            ready = true;
         });
 
-        if(id != null){
+        if(ready){
             if(!response){
                 for(var i = 0; i < dataSize; i++){
                     var marker = map.addMarker({
@@ -67,9 +69,6 @@ window.setInterval(
                 }
                 response = true;
             }
-        }
-
-        if(markers != null){
             for(var i = 0; i < dataSize; i++){
                 markers[i].infoWindow.set('content', 'Sensor '+ id[i] +': Temperature= ' + temperature[i] + '°C, Humidity= ' + humidity[i]);
             }
