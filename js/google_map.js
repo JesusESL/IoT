@@ -34,7 +34,7 @@ window.setInterval(
             temperature = [];
             humidity = [];
             var data = respuesta;
-            console.log(data[0]);
+            console.log(data);
             dataSize = Object.keys(data).length;
             for(var i  = 0; i < dataSize; i++){
                 //id.push(data[i]["sensor_id"]);
