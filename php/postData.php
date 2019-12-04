@@ -31,8 +31,8 @@
 		echo "Dato Actualizado";
 	}
 
-	if($latitud != null){
-		$query =" UPDATE iot SET latitud = ".$latitude.", longitude = ".$longitude." WHERE sensor_id =  ".$id."";
+	if($latitude != null){
+		$query =" UPDATE iot SET latitude = ".$latitude.", longitude = ".$longitude." WHERE sensor_id =  ".$id."";
 		pg_query($query) or die('Error: ' . pg_last_error());
 		echo "Dato Actualizado";
 	}
