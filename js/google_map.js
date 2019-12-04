@@ -28,11 +28,20 @@ window.setInterval(
             type: "POST",
             data: datos
         }).done(function(respuesta){
+            lat = [];
+            lng = [];
+            id = [];
+            temperature = [];
+            humidity = [];
             var data = respuesta;
-            data = sort_by_key(data, 'sensor_id');
-            console.log(data);
             dataSize = Object.keys(data).length;
-
+            for(var i  = 0; i < dataSize; i++){
+                id.push(data[i]["sensor_id"]);
+                lat.push(data[i]["latitude"]);
+                lng.push(data[i]["longitude"]);
+                temperature.push(data[i]["temperature"]);
+                humidity.push(data[i]["humidity"]);
+            }
         });
 
         if(!response){
@@ -107,10 +116,3 @@ $('#changeHumidity').click(function() {
         }
     }
 });
-
-function sort_by_key(array, key){
- return array.sort(function(a, b){
-  var x = a[key]; var y = b[key];
-  return ((x < y) ? -1 : ((x > y) ? 1 : 0));
- });
-}
