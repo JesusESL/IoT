@@ -9,7 +9,7 @@ $(function() {
     // ============================================================== 
     // Guage 1
     // ============================================================== 
-    console.log("Inicializando...");
+
     var opts = {
         angle: 0, // The span of the gauge arc
         lineWidth: 0.32, // The line thickness
@@ -40,7 +40,6 @@ $(function() {
     gaugeTemperature.animationSpeed = 76; // set animation speed (32 is default value)
     gaugeTemperature.set(25); // set actual value
 
-    console.log("Inicializando...");
 // ============================================================== 
     // Guage 2
     // ============================================================== 
@@ -75,7 +74,7 @@ $(function() {
     gaugeHumidity.setMinValue(0); // Prefer setter over gauge.minValue = 0
     gaugeHumidity.animationSpeed = 76; // set animation speed (32 is default value)
     gaugeHumidity.set(50); // set actual value
-    console.log("Inicializando...");
+
 });
 
 

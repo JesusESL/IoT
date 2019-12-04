@@ -14,5 +14,39 @@
 		echo "Conexion exitosa!!\n";
 	} 
 
+	$data[] = 0;
+	
+	if($dbconn) {
+		$sql = "SELECT * FROM iot";
+		$rs = pg_query( $dbconn, $sql );
+		if( $rs ){
+			if( pg_num_rows($rs) >= 0 ){
+				while( $obj = pg_fetch_object($rs) ){
+					$sensor_id = $obj->sensor_id;
+					$username = $obj->username;
+					$email = $obj->email;
+					$latitude = $obj->latitude;
+					$latitude = $obj->latitude;
+					$longitude = $obj->longitude;
+					$temperature = $obj->temperature;
+					$humidity = $obj->humidity;
+					$date = $obj->date;
 
+					$datos = array(
+						'sensor_id' => $sensor_id,
+						'username' => $username,
+						'email' => $email,
+						'latitude' => $latitude,
+						'longitude' => $longitude,
+						'temperature' => $temperature
+						'humidity' => $humidity
+						'date' => $date
+					);
+					array_push($data, $datos);
+				}
+			}
+		}
+	}
+	
+	echo json_encode($data, JSON_FORCE_OBJECT);
 ?>

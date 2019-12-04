@@ -60,7 +60,6 @@ window.setInterval(
             }
             response = true;
         }
-        console.log("Testing");
     }
 ,1000);
 
