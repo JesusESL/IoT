@@ -85,14 +85,14 @@
                 <div class="row">
                     <div class="col">
                         <div class="card">
-                            <h5 class="card-header">Map</h5>
+                            <h5 class="card-header" id="Map">Map</h5>
                             <div class="card-body">
                                 <div class="row justify-content-start">
                                     <div class="col-2">
-                                        <a href="" id="" class="btn btn-primary m-b-20">Temperature</a>
+                                        <a href="#Map" id="changeTemperature" class="btn btn-primary m-b-20">Temperature</a>
                                     </div>
                                     <div class="col-2">
-                                        <a href="" id="" class="btn btn-primary m-b-20">Humidity</a>
+                                        <a href="#Map" id="changeHumidity" class="btn btn-primary m-b-20">Humidity</a>
                                     </div>
                                 </div>
                                 <div id="map" class="gmaps"></div>
