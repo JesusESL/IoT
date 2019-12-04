@@ -10,7 +10,7 @@
 	$data[] = [];
 
 	if($dbconn) {
-		$sql = "SELECT * FROM iot";
+		$sql = "SELECT * FROM iot ORDER BY sensor_id ASC";
 		$rs = pg_query( $dbconn, $sql );
 		if( $rs ){
 			if( pg_num_rows($rs) >= 0 ){
