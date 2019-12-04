@@ -110,7 +110,7 @@
     <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="assets/libs/js/main-js.js"></script>
     <script src="assets/libs/js/gmaps.min.js"></script>
-    <script src="assets/libs/js/google_map.js"></script>
+    <script src="js/google_map.js"></script>
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyCsqd1-ksda8OLf60IgmrfTknNNJAGdhN0&amp;sensor=true"></script>
 </body>
  
