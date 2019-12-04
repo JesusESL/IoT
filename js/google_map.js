@@ -29,7 +29,7 @@ window.setInterval(
             data: datos
         }).done(function(respuesta){
             var data = respuesta;
-            console.log(data.length);
+            console.log(data);
         });
 
         if(!response){
