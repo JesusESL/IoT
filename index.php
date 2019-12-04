@@ -164,39 +164,6 @@
                                                     <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Francisco Pech</td>
-                                                <td>Email</td>
-                                                <td>21.048440</td>
-                                                <td>-89.644645</td>
-                                                <td>30/11/2019</td>
-                                                <td>
-                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Victor Espadas</td>
-                                                <td>Email</td>
-                                                <td>21.047822</td>
-                                                <td>-89.644356</td>
-                                                <td>30/11/2019</td>
-                                                <td>
-                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Jose Bernabe</td>
-                                                <td>Email</td>
-                                                <td>21.048765</td>
-                                                <td>-89.644343</td>
-                                                <td>30/11/2019</td>
-                                                <td>
-                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
-                                                </td>
-                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
