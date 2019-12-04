@@ -156,7 +156,7 @@
                                             <tr>
                                                 <td>1</td>
                                                 <td>Jesus Salazar</td>
-                                                <td>jesus270498@gmail.com</td>
+                                                <td>Email</td>
                                                 <td>21.049138</td>
                                                 <td>-89.645455</td>
                                                 <td>30/11/2019</td>
