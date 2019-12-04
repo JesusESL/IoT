@@ -18,14 +18,21 @@
 	$temperature = $_GET["temperature"];
 	$humidity = $_GET["humidity"];
 	$latitud = $_GET["latitude"];
+	$longitude = $_GET["longitude"];
 	date_default_timezone_set('America/Mexico_City');
 	$date = date("Y-m-d");
 
 	echo $latitud;
 	echo "\n";
-	
+
 	if($temperature != null){
 		$query =" UPDATE iot SET temperature = ".$temperature.", humidity = ".$humidity.", date = '".$date."' WHERE sensor_id =  ".$id."";
+		pg_query($query) or die('Error: ' . pg_last_error());
+		echo "Dato Actualizado";
+	}
+
+	if($latitud != null){
+		$query =" UPDATE iot SET latitud = ".$latitud.", longitude = ".$longitude." WHERE sensor_id =  ".$id."";
 		pg_query($query) or die('Error: ' . pg_last_error());
 		echo "Dato Actualizado";
 	}
