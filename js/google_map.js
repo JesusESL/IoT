@@ -28,6 +28,7 @@ window.setInterval(
             type: "POST",
             data: datos
         }).done(function(respuesta){
+            console.log("Response:");
             console.log(JSON.stringify(respuesta));
         });
 
