@@ -43,7 +43,7 @@ window.setInterval(
                 humidity.push(data[i]["humidity"]);
             }
         });
-        console.log(id);
+
         if(id != []){
             if(!response){
                 for(var i = 0; i < dataSize; i++){
@@ -65,24 +65,26 @@ window.setInterval(
                     markers.push(marker);
                     circles.push(circle);
                 }
-
-                for(var i = 0; i < dataSize; i++){
-                    markers[i].infoWindow.set('content', 'Sensor '+ id[i] +': Temperature= ' + temperature[i] + '°C, Humidity= ' + humidity[i]);
-                }
-
-                for(var i = 0; i < dataSize; i++){
-                    if(temperature[i] < 19){
-                        circles[i].set('fillColor','#00FF00');
-                        circles[i].set('strokeColor','#00FF00');
-                    } else if(temperature[i] > 20 && temperature[i] < 29){
-                        circles[i].set('fillColor','#F0FF00');
-                        circles[i].set('strokeColor','#F0FF00');
-                    } else if(temperature[i] > 30){
-                        circles[i].set('fillColor','#FF0000');
-                        circles[i].set('strokeColor','#FF0000');
-                    }
-                }
                 response = true;
+            }
+        }
+
+        if(markers != []){
+            for(var i = 0; i < dataSize; i++){
+                markers[i].infoWindow.set('content', 'Sensor '+ id[i] +': Temperature= ' + temperature[i] + '°C, Humidity= ' + humidity[i]);
+            }
+
+            for(var i = 0; i < dataSize; i++){
+                if(temperature[i] < 19){
+                    circles[i].set('fillColor','#00FF00');
+                    circles[i].set('strokeColor','#00FF00');
+                } else if(temperature[i] > 20 && temperature[i] < 29){
+                    circles[i].set('fillColor','#F0FF00');
+                    circles[i].set('strokeColor','#F0FF00');
+                } else if(temperature[i] > 30){
+                    circles[i].set('fillColor','#FF0000');
+                    circles[i].set('strokeColor','#FF0000');
+                }
             }
         }
     }
