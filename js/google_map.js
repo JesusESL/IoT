@@ -2,12 +2,12 @@ var map;
 var circles = [];
 var markers = [];
 var response = false;
-var dataSize = 4;
-var lat = [21.049138, 21.048440, 21.047822, 21.048765];
-var lng = [-89.645455, -89.644645, -89.644356, -89.644343];
-var id = [1,2,3,4];
-var temperature = [15,27,28,35];
-var humidity = [55,63,65,68];
+var dataSize = 0;
+var lat = [];
+var lng = [];
+var id = [];
+var temperature = [];
+var humidity = [];
 
 $(function() {
     map = new GMaps({
@@ -29,7 +29,10 @@ window.setInterval(
             data: datos
         }).done(function(respuesta){
             var data = respuesta;
-            console.log(Object.keys(data).length);
+            data = sort_by_key(data, 'sensor_id');
+            console.log(data);
+            dataSize = Object.keys(data).length;
+
         });
 
         if(!response){
@@ -104,3 +107,10 @@ $('#changeHumidity').click(function() {
         }
     }
 });
+
+function sort_by_key(array, key){
+ return array.sort(function(a, b){
+  var x = a[key]; var y = b[key];
+  return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+ });
+}
