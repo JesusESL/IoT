@@ -44,44 +44,46 @@ window.setInterval(
             }
         });
         console.log(id);
-        if(!response){
-            for(var i = 0; i < dataSize; i++){
-                var marker = map.addMarker({
-                    lat: lat[i],
-                    lng: lng[i],
-                    title: 'Sensor' + id[i],
-                    infoWindow: {
-                        content: 'Sensor # Temperature: , Humidity'
-                    }
-                });
-                var circle = map.drawCircle({
-                    lat: lat[i],
-                    lng: lng[i],
-                    radius: 5,
-                    strokeColor: "#00FF00",
-                    fillColor: "#00FF00",
-                });
-                markers.push(marker);
-                circles.push(circle);
-            }
-
-            for(var i = 0; i < dataSize; i++){
-                markers[i].infoWindow.set('content', 'Sensor '+ id[i] +': Temperature= ' + temperature[i] + '°C, Humidity= ' + humidity[i]);
-            }
-
-            for(var i = 0; i < dataSize; i++){
-                if(temperature[i] < 19){
-                    circles[i].set('fillColor','#00FF00');
-                    circles[i].set('strokeColor','#00FF00');
-                } else if(temperature[i] > 20 && temperature[i] < 29){
-                    circles[i].set('fillColor','#F0FF00');
-                    circles[i].set('strokeColor','#F0FF00');
-                } else if(temperature[i] > 30){
-                    circles[i].set('fillColor','#FF0000');
-                    circles[i].set('strokeColor','#FF0000');
+        if(id != []){
+            if(!response){
+                for(var i = 0; i < dataSize; i++){
+                    var marker = map.addMarker({
+                        lat: lat[i],
+                        lng: lng[i],
+                        title: 'Sensor' + id[i],
+                        infoWindow: {
+                            content: 'Sensor # Temperature: , Humidity'
+                        }
+                    });
+                    var circle = map.drawCircle({
+                        lat: lat[i],
+                        lng: lng[i],
+                        radius: 5,
+                        strokeColor: "#00FF00",
+                        fillColor: "#00FF00",
+                    });
+                    markers.push(marker);
+                    circles.push(circle);
                 }
+
+                for(var i = 0; i < dataSize; i++){
+                    markers[i].infoWindow.set('content', 'Sensor '+ id[i] +': Temperature= ' + temperature[i] + '°C, Humidity= ' + humidity[i]);
+                }
+
+                for(var i = 0; i < dataSize; i++){
+                    if(temperature[i] < 19){
+                        circles[i].set('fillColor','#00FF00');
+                        circles[i].set('strokeColor','#00FF00');
+                    } else if(temperature[i] > 20 && temperature[i] < 29){
+                        circles[i].set('fillColor','#F0FF00');
+                        circles[i].set('strokeColor','#F0FF00');
+                    } else if(temperature[i] > 30){
+                        circles[i].set('fillColor','#FF0000');
+                        circles[i].set('strokeColor','#FF0000');
+                    }
+                }
+                response = true;
             }
-            response = true;
         }
     }
 ,1000);
