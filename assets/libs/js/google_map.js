@@ -1,72 +1,94 @@
 var map;
+var circles = [];
+var markers = [];
+var response = false;
+var dataSize = 4;
+var lat = [21.049138, 21.048440, 21.047822, 21.048765];
+var lng = [-89.645455, -89.644645, -89.644356, -89.644343];
+var id = [1,2,3,4];
+var temperature = [15,27,28,35];
+var humidity = [55,63,65,68];
+
 $(function() {
     map = new GMaps({
         div: '#map',
-        zoom: 17,
-        lat: 21.047554,
-        lng: -89.644688
+        zoom: 18,
+        lat: 21.048273,
+        lng: -89.644859
     });
-    map.addMarker({
-        lat: 21.049138,
-        lng: -89.645455,
-        title: 'Sensor1',
-        infoWindow: {
-            content: '<p>Sensor1</p><p>Temperature: 31, Humidity: 62</p>'
-        }
-    });
-    map.drawCircle({
-        lat: 21.049138,
-        lng: -89.645455,
-        radius: 5,
-        strokeColor: "#00FF00",
-        fillColor: "#00FF00",
-    });
+});
 
-    map.addMarker({
-        lat: 21.048440,
-        lng: -89.644645,
-        title: 'Sensor2',
-        infoWindow: {
-            content: '<p>Sensor1</p><p>Temperature: 31, Humidity: 63</p>'
-        }
-    });
-    map.drawCircle({
-        lat: 21.048440,
-        lng: -89.644645,
-        radius: 5,
-        strokeColor: "#00FF00",
-        fillColor: "#00FF00",
-    });
+window.setInterval(
+    function(){
+        if(!response){
+            for(var i = 0; i < dataSize; i++){
+                var marker = map.addMarker({
+                    lat: lat[i],
+                    lng: lng[i],
+                    title: 'Sensor' + id[i],
+                    infoWindow: {
+                        content: 'Sensor # Temperature: , Humidity'
+                    }
+                });
+                var circle = map.drawCircle({
+                    lat: lat[i],
+                    lng: lng[i],
+                    radius: 5,
+                    strokeColor: "#00FF00",
+                    fillColor: "#00FF00",
+                });
+                markers.push(marker);
+                circles.push(circle);
+            }
+            console.log(markers);
 
-    map.addMarker({
-        lat: 21.047822,
-        lng: -89.644356,
-        title: 'Sensor3',
-        infoWindow: {
-            content: '<p>Sensor1</p><p>Temperature: 31, Humidity: 64</p>'
-        }
-    });
-    map.drawCircle({
-        lat: 21.047822,
-        lng: -89.644356,
-        radius: 5,
-        strokeColor: "#00FF00",
-        fillColor: "#00FF00",
-    });
+            for(var i = 0; i < dataSize; i++){
+                markers[i].infoWindow.set('content', 'Sensor '+ id[i] +': Temperature= ' + temperature[i] + '°C, Humidity= ' + humidity[i]);
+            }
 
-    map.addMarker({
-        lat: 21.048765,
-        lng: -89.644343,
-        title: 'Sensor4',
-        infoWindow: {
-            content: '<p>Sensor1</p><p>Temperature: 31, Humidity: 65</p>'
+            for(var i = 0; i < dataSize; i++){
+                if(temperature[i] < 19){
+                    circles[i].set('fillColor','#00FF00');
+                    circles[i].set('strokeColor','#00FF00');
+                } else if(temperature[i] > 20 && temperature[i] < 29){
+                    circles[i].set('fillColor','#F0FF00');
+                    circles[i].set('strokeColor','#F0FF00');
+                } else if(temperature[i] > 30){
+                    circles[i].set('fillColor','#FF0000');
+                    circles[i].set('strokeColor','#FF0000');
+                }
+            }
+            response = true;
         }
-    });
-    map.drawCircle({
-        lat: 21.048765,
-        lng: -89.644343,
-        radius: 5,
-        strokeColor: "#00FF00",
-        fillColor: "#00FF00",
-    });
+    }
+,1000);
+
+$('#changeTemperature').click(function() {
+    for(var i = 0; i < dataSize; i++){
+        if(temperature[i] < 19){
+            circles[i].set('fillColor','#00FF00');
+            circles[i].set('strokeColor','#00FF00');
+        } else if(temperature[i] > 20 && temperature[i] < 29){
+            circles[i].set('fillColor','#F0FF00');
+            circles[i].set('strokeColor','#F0FF00');
+        } else if(temperature[i] > 30){
+            circles[i].set('fillColor','#FF0000');
+            circles[i].set('strokeColor','#FF0000');
+        }
+    }
+});
+
+$('#changeHumidity').click(function() {
+    for(var i = 0; i < dataSize; i++){
+        if(humidity[i] < 59){
+            circles[i].set('fillColor','#bbdefb');
+            circles[i].set('strokeColor','#bbdefb');
+        } else if(humidity[i] > 60 && humidity[i] < 79){
+            circles[i].set('fillColor','#42a5f5');
+            circles[i].set('strokeColor','#42a5f5');
+        } else if(humidity[i] > 80){
+            circles[i].set('fillColor','#1565c0');
+            circles[i].set('strokeColor','#1565c0');
+        }
+    }
 });

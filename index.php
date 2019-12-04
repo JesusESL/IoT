@@ -66,13 +66,13 @@
                                 Menu
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.php"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                                <a class="nav-link" href="index.html"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="map.php"><i class="fas fa-fw fa-map-marker-alt"></i>Google Maps</a>
+                                <a class="nav-link" href="map.html"><i class="fas fa-fw fa-map-marker-alt"></i>Google Maps</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="settings.php"><i class="fas fa-cog mr-2"></i>Settings</a>
+                                <a class="nav-link" href="settings.html"><i class="fas fa-cog mr-2"></i>Settings</a>
                             </li>
                         </ul>
                     </div>
@@ -83,7 +83,7 @@
         <div class="dashboard-wrapper">
             <div class="container-fluid  dashboard-content">
 
-                <div class="row">
+                <div class="row" id="info">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
                             <h2 class="pageheader-title">Dashboard</h2>
@@ -96,11 +96,11 @@
                             <div class="card-body">
                                 <h3 class="card-title">Sensor</h3>
                             </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Name: Jesus Salazar</li>
-                                <li class="list-group-item">ID sensor: 1</li>
-                                <li class="list-group-item">Location: (21.047688,-89.644690)</li>
-                                <li class="list-group-item">Last update data: 30/11/2019</li>
+                            <ul class="list-group list-group-flush" id="sensorInfo">
+                                <li id="sensorName" class="list-group-item">Name: Jesus Salazar</li>
+                                <li id="sensorID" class="list-group-item">ID sensor: 1</li>
+                                <li id="sensorLocation" class="list-group-item">Location: (21.047688,-89.644690)</li>
+                                <li id="sensorDate"class="list-group-item">Last update data: 30/11/2019</li>
                             </ul>
                         </div>
                     </div>
@@ -109,10 +109,15 @@
                         <div class="card">
                             <h5 class="card-header">Temperature</h5>
                             <div class="card-body">
-                              <div class="col-11 text-center">
-                                <h3 id="gauge1-value"></h3>
-                              </div>
-                              <canvas id="gauge1"></canvas>
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <h3 id="gauge1-value"></h3>
+                                    </div>
+                                    <div class="col-2">
+                                        <h3>°C</h3>
+                                    </div>
+                                </div>
+                                <canvas id="gauge1"></canvas>
                             </div>
                         </div>
                     </div>
@@ -156,9 +161,7 @@
                                                 <td>-89.645455</td>
                                                 <td>30/11/2019</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
-                                                    <a href="#" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-edit"></i></a>
-                                                    <a href="#" class="btn btn-secondary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-trash-alt"></i></a>
+                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -169,9 +172,7 @@
                                                 <td>-89.644645</td>
                                                 <td>30/11/2019</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
-                                                    <a href="#" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-edit"></i></a>
-                                                    <a href="#" class="btn btn-secondary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-trash-alt"></i></a>
+                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -182,9 +183,7 @@
                                                 <td>-89.644356</td>
                                                 <td>30/11/2019</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
-                                                    <a href="#" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-edit"></i></a>
-                                                    <a href="#" class="btn btn-secondary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-trash-alt"></i></a>
+                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -195,9 +194,7 @@
                                                 <td>-89.644343</td>
                                                 <td>30/11/2019</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
-                                                    <a href="#" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-edit"></i></a>
-                                                    <a href="#" class="btn btn-secondary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-trash-alt"></i></a>
+                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
                                                 </td>
                                             </tr>
                                         </tbody>
