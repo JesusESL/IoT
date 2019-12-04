@@ -47,5 +47,8 @@
 		}
 	}
 	unset($data[0]);
+
+	$opcion = $_POST["opcion"];
+	header('Content-Type: application/json');
 	echo json_encode($data, JSON_FORCE_OBJECT);
 ?>

@@ -14,4 +14,16 @@
 		echo "Conexion exitosa!!\n";
 	}
 
+	$id = $_GET["id"];
+	$temperature = $_GET["temperature"];
+	$humidity = $_GET["humidity"];
+	date_default_timezone_set('America/Mexico_City');
+	$date = date("Y-m-d");
+
+	if($temperature != null){
+		$query =" UPDATE iot SET temperature = ".$temperature.", humidity = ".$humidity.", date = '".$date."' WHERE id =  ".$id."";
+		pg_query($query) or die('Error: ' . pg_last_error());
+		echo "Dato Actualizado";
+	}
+	pg_close($dbconn);
 ?>
