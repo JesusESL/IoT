@@ -34,13 +34,14 @@ window.setInterval(
             temperature = [];
             humidity = [];
             var data = respuesta;
+            console.log(data[0]);
             dataSize = Object.keys(data).length;
             for(var i  = 0; i < dataSize; i++){
-                id.push(data[i]["sensor_id"]);
-                lat.push(data[i]["latitude"]);
-                lng.push(data[i]["longitude"]);
-                temperature.push(data[i]["temperature"]);
-                humidity.push(data[i]["humidity"]);
+                //id.push(data[i]["sensor_id"]);
+                //lat.push(data[i]["latitude"]);
+                //lng.push(data[i]["longitude"]);
+                //temperature.push(data[i]["temperature"]);
+                //humidity.push(data[i]["humidity"]);
             }
         });
 
@@ -85,7 +86,7 @@ window.setInterval(
             response = true;
         }
     }
-,1000);
+,5000);
 
 $('#changeTemperature').click(function() {
     for(var i = 0; i < dataSize; i++){
