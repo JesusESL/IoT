@@ -22,23 +22,23 @@
 		if( $rs ){
 			if( pg_num_rows($rs) >= 0 ){
 				while( $obj = pg_fetch_object($rs) ){
-					console.log("Testing");
+					echo "Testing";
 					$sensor_id = $obj->sensor_id;
-					console.log($sensor_id);
+					echo $sensor_id;
 					$username = $obj->username;
-					console.log($username);
+					echo $username;
 					$email = $obj->email;
-					console.log($email);
+					echo $email;
 					$latitude = $obj->latitude;
-					console.log($latitude);
+					echo $latitude;
 					$longitude = $obj->longitude;
-					console.log($longitude);
+					echo $longitude;
 					$temperature = $obj->temperature;
-					console.log($temperature);
+					echo $temperature;
 					$humidity = $obj->humidity;
-					console.log($humidity);
+					echo $humidity;
 					$date = $obj->date;
-					console.log($date);
+					echo $date;
 
 					/*$datos = array(
 						'sensor_id' => $sensor_id,
