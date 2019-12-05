@@ -10,7 +10,7 @@ var id = [];
 var temperature = [];
 var humidity = [];
 var showHumidity = false;
-var showTemperature = false;
+var showTemperature = true;
 
 $(function() {
     map = new GMaps({

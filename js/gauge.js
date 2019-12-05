@@ -1,9 +1,11 @@
 var IDsensor = -1;
-var id = [1,2,3,4];
-var temperature = [15,27,28,35];
-var humidity = [55,63,65,68];
+var id = [];
+var temperature = [];
+var humidity = [];
 var gaugeTemperature;
 var gaugeHumidity;
+var ready = false;
+var headerText = ["ID","Name","Email","Lat","Lon","Last Update"]
 $(function() {
     "use strict";
     // ============================================================== 
@@ -75,6 +77,66 @@ $(function() {
     gaugeHumidity.animationSpeed = 76; // set animation speed (32 is default value)
     gaugeHumidity.set(50); // set actual value
 
+
+    var tabla = document.getElementById('dataBaseInfo');
+    var tablaHead = document.getElementById('dataBaseInfoHead');
+    var tablaBody = document.getElementById('dataBaseInfoBody');
+    var row = document.createElement("tr")
+
+    for(var i = 0; i < 6; i++){
+        var cell = document.createElement("td");
+        var textCell = document.createTextNode(headerText[i]);
+        cell.appendChild(textCell);
+        row.appendChild(cell);
+    }
+    tablaHead.appendChild(row);
+
+    opcion = 1;
+    datos = {"Opcion":opcion};
+    $.ajax({
+        url: "../php/getData.php",
+        type: "POST",
+        data: datos
+    }).done(function(respuesta){
+        temperature = [];
+        humidity = [];
+        var data = respuesta;
+        dataSize = Object.keys(data).length;
+        for(var i = 1; i < dataSize+1; i++){
+            temperature.push(data[i]["temperature"]);
+            humidity.push(data[i]["humidity"]);
+            var row = document.createElement("tr")
+
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["username"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["email"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["latitude"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["longitude"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["date"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            tablaBody.appendChild(body);
+        }
+        ready = true;
+    });
+
 });
 
 
@@ -92,15 +154,30 @@ $('tr').click(function(e) {
 
 
 window.setInterval(function(){
-    opcion = 1;
+    /*opcion = 1;
     datos = {"Opcion":opcion};
     $.ajax({
         url: "../php/getData.php",
         type: "POST",
         data: datos
     }).done(function(respuesta){
-        console.log("Response:");
-        console.log(JSON.stringify(respuesta));
+        lat = [];
+        lng = [];
+        id = [];
+        temperature = [];
+        humidity = [];
+        var data = respuesta;
+        dataSize = Object.keys(data).length;
+        for(var i = 1; i < dataSize+1; i++){
+            id.push(data[i]["sensor_id"]);
+            temperature.push(data[i]["temperature"]);
+            humidity.push(data[i]["humidity"]);
+        }
+        ready = true;
     });
+
+    if(ready){
+
+    }*/
 },1000)
 
