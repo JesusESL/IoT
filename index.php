@@ -140,8 +140,8 @@
                             <h5 class="card-header">Sensor table</h5>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-bordered first" id="dataBaseInfo">
-                                        <thead id="dataBaseInfoHead">
+                                    <table class="table table-striped table-bordered first" id="info">
+                                        <thead>
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Name</th>
@@ -149,10 +149,54 @@
                                                 <th>Lat</th>
                                                 <th>Lon</th>
                                                 <th>Last update</th>
+                                                <th>Actions</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="dataBaseInfoBody">
-                                            
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Jesus Salazar</td>
+                                                <td>jesus270498@gmail.com</td>
+                                                <td>21.049138</td>
+                                                <td>-89.645455</td>
+                                                <td>30/11/2019</td>
+                                                <td>
+                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Francisco Pech</td>
+                                                <td>Email</td>
+                                                <td>21.048440</td>
+                                                <td>-89.644645</td>
+                                                <td>30/11/2019</td>
+                                                <td>
+                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Victor Espadas</td>
+                                                <td>Email</td>
+                                                <td>21.047822</td>
+                                                <td>-89.644356</td>
+                                                <td>30/11/2019</td>
+                                                <td>
+                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Jose Bernabe</td>
+                                                <td>Email</td>
+                                                <td>21.048765</td>
+                                                <td>-89.644343</td>
+                                                <td>30/11/2019</td>
+                                                <td>
+                                                    <a href="#info" class="btn btn-primary btn-sm" role="button" aria-pressed="true"><i class="fa fa-fw fa-upload"></i></a>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -167,6 +211,7 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="assets/vendor/gauge/gauge.min.js"></script>
+    <script src="js/gauge.js"></script>
     <script src="assets/libs/js/main-js.js"></script>
     <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
@@ -187,7 +232,6 @@
     <script src="https://cdn.datatables.net/rowgroup/1.0.4/js/dataTables.rowGroup.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
-    <script src="js/gauge.js"></script>
 </body>
  
 </html>

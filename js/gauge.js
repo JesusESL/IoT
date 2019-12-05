@@ -1,11 +1,9 @@
 var IDsensor = -1;
-var id = [];
-var temperature = [];
-var humidity = [];
+var id = [1,2,3,4];
+var temperature = [15,27,28,35];
+var humidity = [55,63,65,68];
 var gaugeTemperature;
 var gaugeHumidity;
-var ready = false;
-
 $(function() {
     "use strict";
     // ============================================================== 
@@ -40,7 +38,7 @@ $(function() {
     gaugeTemperature.maxValue = 50; // set max gauge value
     gaugeTemperature.setMinValue(0); // Prefer setter over gauge.minValue = 0
     gaugeTemperature.animationSpeed = 76; // set animation speed (32 is default value)
-    gaugeTemperature.set(10); // set actual value
+    gaugeTemperature.set(25); // set actual value
 
 // ============================================================== 
     // Guage 2
@@ -75,7 +73,8 @@ $(function() {
     gaugeHumidity.maxValue = 100; // set max gauge value
     gaugeHumidity.setMinValue(0); // Prefer setter over gauge.minValue = 0
     gaugeHumidity.animationSpeed = 76; // set animation speed (32 is default value)
-    gaugeHumidity.set(10); // set actual value
+    gaugeHumidity.set(50); // set actual value
+
 });
 
 
@@ -87,12 +86,22 @@ $('tr').click(function(e) {
     document.getElementById("sensorLocation").innerHTML = "Location: (" + txt.find("td:eq(3)").text() + "," + txt.find("td:eq(4)").text()+ ")";
     document.getElementById("sensorDate").innerHTML = "Last update data: " + txt.find("td:eq(5)").text();
 
-    //gaugeTemperature.set(temperature[IDsensor-1]);
-    //gaugeHumidity.set(humidity[IDsensor-1]);
+    gaugeTemperature.set(temperature[IDsensor-1]);
+    gaugeHumidity.set(humidity[IDsensor-1]);
  });
 
 
 window.setInterval(function(){
+    /*opcion = 1;
+    datos = {"Opcion":opcion};
+    $.ajax({
+        url: "../php/getData.php",
+        type: "POST",
+        data: datos
+    }).done(function(respuesta){
+        console.log("Response:");
+        console.log(JSON.stringify(respuesta));
+    });*/
     console.log("Testing");
 },1000)
 
