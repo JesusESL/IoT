@@ -87,7 +87,7 @@ $(function() {
         temperature = [];
         humidity = [];
         var data = respuesta;
-        dataSize = Object.keys(data).length;
+        var dataSize = Object.keys(data).length;
         for(var i = 1; i < dataSize+1; i++){
             temperature.push(data[i]["temperature"]);
             humidity.push(data[i]["humidity"]);
