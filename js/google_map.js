@@ -116,8 +116,8 @@ function changeTemperature() {
 };
 
 function changeHumidity() {
-    showTemperature = true;
-    showHumidity = false;
+    showTemperature = false;
+    showHumidity = true;
     console.log(showTemperature);
     console.log(showHumidity);
 };
