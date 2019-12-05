@@ -114,9 +114,13 @@ window.setInterval(
 $('#changeTemperature').click(function() {
     showTemperature = true;
     showHumidity = false;
+    console.log(showTemperature);
+    console.log(showHumidity);
 });
 
 $('#changeHumidity').click(function() {
     showTemperature = false;
     showHumidity = true;
+    console.log(showTemperature);
+    console.log(showHumidity);
 });
