@@ -5,7 +5,7 @@ var humidity = [];
 var gaugeTemperature;
 var gaugeHumidity;
 var ready = false;
-var headerText = ["ID","Name","Email","Lat","Lon","Last Update"]
+
 $(function() {
     "use strict";
     // ============================================================== 

@@ -142,7 +142,14 @@
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered first" id="dataBaseInfo">
                                         <thead id="dataBaseInfoHead">
-
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Lat</th>
+                                                <th>Lon</th>
+                                                <th>Last update</th>
+                                            </tr>
                                         </thead>
                                         <tbody id="dataBaseInfoBody">
                                             
