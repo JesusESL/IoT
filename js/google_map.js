@@ -104,6 +104,9 @@ window.setInterval(
                     }
                 }
             }
+            
+            console.log(showTemperature);
+            console.log(showHumidity);
         }
     }
 ,1000);
