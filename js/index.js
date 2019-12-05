@@ -75,6 +75,60 @@ $(function() {
     gaugeHumidity.animationSpeed = 76; // set animation speed (32 is default value)
     gaugeHumidity.set(50); // set actual value
 
+    var tableBody = document.createElement("tableBodyInfo");
+
+    opcion = 1;
+    datos = {"Opcion":opcion};
+    $.ajax({
+        url: "../php/getData.php",
+        type: "POST",
+        data: datos
+    }).done(function(respuesta){
+        temperature = [];
+        humidity = [];
+        var data = respuesta;
+        dataSize = Object.keys(data).length;
+        for(var i = 1; i < dataSize+1; i++){
+            temperature.push(data[i]["temperature"]);
+            humidity.push(data[i]["humidity"]);
+
+            var row = document.createElement("tr");
+            
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["sensor_id"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["username"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["email"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["latitude"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["longitude"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            var cell = document.createElement("td");
+            var textCell = document.createTextNode(data[i]["date"]);
+            cell.appendChild(textCell);
+            row.appendChild(cell);
+
+            tableBody.appendChild(row);
+        }
+        ready = true;
+    });
+
 });
 
 
@@ -92,14 +146,6 @@ $('tr').click(function(e) {
 
 
 window.setInterval(function(){
-    opcion = 1;
-    datos = {"Opcion":opcion};
-    $.ajax({
-        url: "../php/getData.php",
-        type: "POST",
-        data: datos
-    }).done(function(respuesta){
-        console.log("Testing");
-    });
+
 },1000)
 
