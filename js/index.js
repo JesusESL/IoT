@@ -78,7 +78,7 @@ $(function() {
     var tableBody = document.getElementById("tableBodyInfo");
 
     var opcion = 1;
-    datos = {"Opcion":opcion};
+    var datos = {"Opcion":opcion};
     $.ajax({
         url: "../php/getData.php",
         type: "POST",

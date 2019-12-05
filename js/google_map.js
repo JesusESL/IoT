@@ -25,7 +25,7 @@ window.setInterval(
     function(){
 
         var opcion = 1;
-        datos = {"Opcion":opcion};
+        var datos = {"Opcion":opcion};
         $.ajax({
             url: "../php/getData.php",
             type: "POST",
