@@ -148,6 +148,23 @@ $('tr').click(function(e) {
 
 
 window.setInterval(function(){
+    var opcion = 1;
+    var datos = {"Opcion":opcion};
+    $.ajax({
+        url: "../php/getData.php",
+        type: "POST",
+        data: datos
+    }).done(function(respuesta){
 
+        temperature = [];
+        humidity = [];
+        var data = respuesta;
+        var dataSize = Object.keys(data).length;
+        for(var i = 1; i < dataSize+1; i++){
+            temperature.push(data[i]["temperature"]);
+            humidity.push(data[i]["humidity"]);
+        }
+        ready = true;
+    });
 },1000)
 
