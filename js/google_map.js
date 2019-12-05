@@ -104,23 +104,20 @@ window.setInterval(
                     }
                 }
             }
-            
-            console.log(showTemperature);
-            console.log(showHumidity);
         }
     }
 ,1000);
 
-$('#changeTemperature').click(function() {
+function changeTemperature() {
     showTemperature = true;
     showHumidity = false;
     console.log(showTemperature);
     console.log(showHumidity);
-});
+};
 
-$('#changeHumidity').click(function() {
-    showTemperature = false;
-    showHumidity = true;
+function changeHumidity() {
+    showTemperature = true;
+    showHumidity = false;
     console.log(showTemperature);
     console.log(showHumidity);
-});
+};
