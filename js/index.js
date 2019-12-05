@@ -38,7 +38,7 @@ $(function() {
     gaugeTemperature.maxValue = 50; // set max gauge value
     gaugeTemperature.setMinValue(0); // Prefer setter over gauge.minValue = 0
     gaugeTemperature.animationSpeed = 76; // set animation speed (32 is default value)
-    gaugeTemperature.set(25); // set actual value
+    gaugeTemperature.set(10); // set actual value
 
 // ============================================================== 
     // Guage 2
@@ -73,9 +73,9 @@ $(function() {
     gaugeHumidity.maxValue = 100; // set max gauge value
     gaugeHumidity.setMinValue(0); // Prefer setter over gauge.minValue = 0
     gaugeHumidity.animationSpeed = 76; // set animation speed (32 is default value)
-    gaugeHumidity.set(50); // set actual value
+    gaugeHumidity.set(10); // set actual value
 
-    var tableBody = document.createElement("tableBodyInfo");
+    var tableBody = document.getElementById("tableBodyInfo");
 
     var opcion = 1;
     datos = {"Opcion":opcion};
