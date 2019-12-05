@@ -24,8 +24,8 @@ $(function() {
 window.setInterval(
     function(){
 
-        var opcion = 1;
-        var datos = {"Opcion":opcion};
+        opcion = 1;
+        datos = {"Opcion":opcion};
         $.ajax({
             url: "../php/getData.php",
             type: "POST",
@@ -37,7 +37,7 @@ window.setInterval(
             temperature = [];
             humidity = [];
             var data = respuesta;
-            var dataSize = Object.keys(data).length;
+            dataSize = Object.keys(data).length;
             for(var i = 1; i < dataSize+1; i++){
                 id.push(data[i]["sensor_id"]);
                 lat.push(data[i]["latitude"]);
