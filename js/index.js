@@ -110,9 +110,13 @@ window.setInterval(
                 for(var i = 1; i < dataSize+1; i++){
                     temperature.push(data[i]["temperature"]);
                     humidity.push(data[i]["humidity"]);
-
-                    table.innerHTML += '<tbody><tr><td>' + data[i]["sensor_id"] + '</td><td>' + data[i]["username"] + '</td><td>' + data[i]["email"] + '</td><td>' + data[i]["latitude"] + '</td><td>' + data[i]["longitude"] + '</td><td>' + data[i]["date"] + '</td></tr></tbody>'
-                    /*var tableBody = document.getElementById("tableBodyInfo");
+                    console.log(data[i]);
+                    if ($.fn.DataTable.isDataTable('#tableInfo')){
+                        $('#tableInfo').DataTable().destroy();
+                    };
+             
+                    console.log(data[i]["sensor_id"]);
+                    var tableBody = document.getElementById("tableBodyInfo");
                     var row = document.createElement("tr");
                     
                     var cell = document.createElement("td");
@@ -145,7 +149,10 @@ window.setInterval(
                     cell.appendChild(textCell);
                     row.appendChild(cell);
 
-                    tableBody.appendChild(row);*/
+                    tableBody.appendChild(row);
+
+                    // Initialize the table
+                    $('#tableInfo').DataTable();
                 }
                 ready = true;
             });
