@@ -4,6 +4,8 @@ var temperature = [15,27,28,35];
 var humidity = [55,63,65,68];
 var gaugeTemperature;
 var gaugeHumidity;
+var ready = false;
+
 $(function() {
     "use strict";
     // ============================================================== 
