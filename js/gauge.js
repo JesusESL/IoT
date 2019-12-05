@@ -92,7 +92,7 @@ $('tr').click(function(e) {
 
 
 window.setInterval(function(){
-    /*opcion = 1;
+    opcion = 1;
     datos = {"Opcion":opcion};
     $.ajax({
         url: "../php/getData.php",
@@ -100,8 +100,6 @@ window.setInterval(function(){
         data: datos
     }).done(function(respuesta){
         console.log("Response:");
-        console.log(JSON.stringify(respuesta));
-    });*/
-    console.log("Testing");
+    });
 },1000)
 
