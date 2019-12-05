@@ -106,12 +106,12 @@ window.setInterval(
                 humidity = [];
                 var data = respuesta;
                 dataSize = Object.keys(data).length;
-                tableBody = document.getElementById('tableBodyInfo');
+                table = document.getElementById('tableInfo');
                 for(var i = 1; i < dataSize+1; i++){
                     temperature.push(data[i]["temperature"]);
                     humidity.push(data[i]["humidity"]);
 
-                    tableBody.innerHTML += '<tr></td>' + data[i]["sensor_id"] + '</td><td>' + data[i]["username"] + '</td><td>' + data[i]["email"] + '</td><td>' + data[i]["latitude"] + '</td><td>' + data[i]["longitude"] + '</td><td>' + data[i]["date"] + '</td></tr>'
+                    table.innerHTML += '<tbody><tr><td>' + data[i]["sensor_id"] + '</td><td>' + data[i]["username"] + '</td><td>' + data[i]["email"] + '</td><td>' + data[i]["latitude"] + '</td><td>' + data[i]["longitude"] + '</td><td>' + data[i]["date"] + '</td></tr></tbody>'
                     /*var tableBody = document.getElementById("tableBodyInfo");
                     var row = document.createElement("tr");
                     
