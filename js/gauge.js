@@ -99,7 +99,7 @@ window.setInterval(function(){
         type: "POST",
         data: datos
     }).done(function(respuesta){
-        console.log("Response:");
+        console.log("Testing");
     });
 },1000)
 
