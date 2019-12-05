@@ -100,7 +100,7 @@
                                         <input id="inputEmail" type="email" name="email" data-parsley-trigger="change" required="" placeholder="Enter email" autocomplete="off" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputEmail">ID sensor</label>
+                                        <label for="inputID">ID sensor</label>
                                         <input id="inputID" type="text" name="id" data-parsley-trigger="change" required="" placeholder="Enter ID sensor" autocomplete="off" class="form-control">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
