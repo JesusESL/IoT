@@ -115,7 +115,9 @@ window.setInterval(
                         $('#tableInfo').DataTable().destroy();
                     };
              
-                    console.log(data[i]["sensor_id"]);
+                    // Initialize the table
+                    $('#tableInfo').DataTable();
+
                     var tableBody = document.getElementById("tableBodyInfo");
                     var row = document.createElement("tr");
                     
@@ -151,8 +153,6 @@ window.setInterval(
 
                     tableBody.appendChild(row);
 
-                    // Initialize the table
-                    $('#tableInfo').DataTable();
                 }
                 ready = true;
             });
