@@ -75,10 +75,10 @@ $(function() {
     gaugeHumidity.maxValue = 100; // set max gauge value
     gaugeHumidity.setMinValue(0); // Prefer setter over gauge.minValue = 0
     gaugeHumidity.animationSpeed = 76; // set animation speed (32 is default value)
-    gaugeHumidity.set(50); // set actual value
+    gaugeHumidity.set(10); // set actual value
 
 
-    var tabla = document.getElementById('dataBaseInfo');
+    /*var tabla = document.getElementById('dataBaseInfo');
     var tablaHead = document.getElementById('dataBaseInfoHead');
     var tablaBody = document.getElementById('dataBaseInfoBody');
     var row = document.createElement("tr")
@@ -91,7 +91,7 @@ $(function() {
     }
     tablaHead.appendChild(row);
 
-    /*opcion = 1;
+    opcion = 1;
     datos = {"Opcion":opcion};
     $.ajax({
         url: "../php/getData.php",
@@ -154,30 +154,6 @@ $('tr').click(function(e) {
 
 
 window.setInterval(function(){
-    /*opcion = 1;
-    datos = {"Opcion":opcion};
-    $.ajax({
-        url: "../php/getData.php",
-        type: "POST",
-        data: datos
-    }).done(function(respuesta){
-        lat = [];
-        lng = [];
-        id = [];
-        temperature = [];
-        humidity = [];
-        var data = respuesta;
-        dataSize = Object.keys(data).length;
-        for(var i = 1; i < dataSize+1; i++){
-            id.push(data[i]["sensor_id"]);
-            temperature.push(data[i]["temperature"]);
-            humidity.push(data[i]["humidity"]);
-        }
-        ready = true;
-    });
-
-    if(ready){
-
-    }*/
+    console.log("Testing");
 },1000)
 
