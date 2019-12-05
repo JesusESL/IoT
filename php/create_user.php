@@ -13,7 +13,7 @@
   date_default_timezone_set('America/Mexico_City');
 	$date = date("Y-m-d");
 
-  $query = "INSERT INTO iot(sensor_id, username, email, latitude, longitude, temperature, humidity, date) values(".$id.",'".$username."','".$email."',0,0,0,0,'".$date."'";
+  $query = "INSERT INTO iot(sensor_id, username, email, latitude, longitude, temperature, humidity, date) values(".$id.",'".$username."','".$email."',0,0,0,0,'".$date."')";
   pg_query($query) or die('Error: ' . pg_last_error());
   echo "Dato Actualizado";
 	pg_close($dbconn);
