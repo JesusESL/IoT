@@ -89,7 +89,7 @@ window.setInterval(
                     }
                 }
             }
-            
+
             if(showHumidity){
                 for(var i = 0; i < dataSize; i++){
                     if(humidity[i] < 59){
@@ -114,6 +114,6 @@ $('#changeTemperature').click(function() {
 });
 
 $('#changeHumidity').click(function() {
-    showTemperature = true;
+    showTemperature = false;
     showHumidity = true;
 });
