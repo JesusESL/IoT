@@ -80,7 +80,7 @@ $(function() {
 });
 
 
-$('tr').click(function(e) {
+$('#tableBodyInfo').click(function(e) {
     var txt = $(e.target).closest("tr");
     IDsensor = parseInt(txt.find("td:eq(0)").text());
     document.getElementById("sensorName").innerHTML = "Name: " + txt.find("td:eq(1)").text();
