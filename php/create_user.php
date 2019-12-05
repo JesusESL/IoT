@@ -7,7 +7,6 @@
 	$conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
 	$dbconn = pg_connect($conn_string);
 
-  console.log("Testing php form");
   
 	pg_close($dbconn);
 ?>

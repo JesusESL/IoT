@@ -13,12 +13,12 @@ $(document).ready(function(){
       datos = {"username":username,
                "email":email,
                "id":id};
-      $.ajax({
+      /*$.ajax({
         url: "../php/login.php",
         type: "POST",
         data: datos
       }).done(function(respuesta){
         console.log(respuesta);
-      }
+      }*/
   });
 });
