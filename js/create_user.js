@@ -1,7 +1,7 @@
 $('#createUser').submit(function() {
-  var username = $("input[name=name]").val();
-  var email = $("input[name=email]").val();
-  var sensor_id = $("input[name=id]").val();
+  var username = document.getElementById("inputUserName").value;
+  var email = document.getElementById("inputEmail").value;
+  var sensor_id = document.getElementById("inputID").value;
 
   console.log(username);
   console.log(email);
