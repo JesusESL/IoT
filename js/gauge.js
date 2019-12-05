@@ -91,7 +91,7 @@ $(function() {
     }
     tablaHead.appendChild(row);
 
-    opcion = 1;
+    /*opcion = 1;
     datos = {"Opcion":opcion};
     $.ajax({
         url: "../php/getData.php",
@@ -135,7 +135,7 @@ $(function() {
             tablaBody.appendChild(body);
         }
         ready = true;
-    });
+    });*/
 
 });
 
