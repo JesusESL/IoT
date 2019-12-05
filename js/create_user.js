@@ -20,6 +20,6 @@ $(document).ready(function(){
         data: datos
       }).done(function(respuesta){
         console.log(respuesta);
-      }
+      });
   });
 });
