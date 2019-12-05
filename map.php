@@ -89,10 +89,10 @@
                             <div class="card-body">
                                 <div class="row justify-content-start">
                                     <div class="col-2">
-                                        <a href="#Map" id="changeTemperature" class="btn btn-primary m-b-20">Temperature</a>
+                                        <a href="#" id="changeTemperature" class="btn btn-primary m-b-20">Temperature</a>
                                     </div>
                                     <div class="col-2">
-                                        <a href="#Map" id="changeHumidity" class="btn btn-primary m-b-20">Humidity</a>
+                                        <a href="#" id="changeHumidity" class="btn btn-primary m-b-20">Humidity</a>
                                     </div>
                                 </div>
                                 <div id="map" class="gmaps"></div>
