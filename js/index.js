@@ -106,11 +106,13 @@ window.setInterval(
                 humidity = [];
                 var data = respuesta;
                 dataSize = Object.keys(data).length;
+                tableBody = document.getElementById('tableBodyInfo');
                 for(var i = 1; i < dataSize+1; i++){
                     temperature.push(data[i]["temperature"]);
                     humidity.push(data[i]["humidity"]);
 
-                    var tableBody = document.getElementById("tableBodyInfo");
+                    console.log(tableBody);
+                    /*var tableBody = document.getElementById("tableBodyInfo");
                     var row = document.createElement("tr");
                     
                     var cell = document.createElement("td");
@@ -143,7 +145,7 @@ window.setInterval(
                     cell.appendChild(textCell);
                     row.appendChild(cell);
 
-                    tableBody.appendChild(row);
+                    tableBody.appendChild(row);*/
                 }
                 ready = true;
             });
