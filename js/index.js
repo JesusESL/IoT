@@ -77,8 +77,6 @@ $(function() {
     gaugeHumidity.animationSpeed = 76; // set animation speed (32 is default value)
     gaugeHumidity.set(10); // set actual value
 
-    var tableBody = document.getElementById("tableBodyInfo");
-
 });
 
 
@@ -107,11 +105,12 @@ window.setInterval(
                 temperature = [];
                 humidity = [];
                 var data = respuesta;
-                var dataSize = Object.keys(data).length;
+                dataSize = Object.keys(data).length;
                 for(var i = 1; i < dataSize+1; i++){
                     temperature.push(data[i]["temperature"]);
                     humidity.push(data[i]["humidity"]);
 
+                    var tableBody = document.getElementById("tableBodyInfo");
                     var row = document.createElement("tr");
                     
                     var cell = document.createElement("td");
