@@ -104,7 +104,7 @@
                                         <input id="inputUserName" type="text" name="id" data-parsley-trigger="change" required="" placeholder="Enter ID sensor" autocomplete="off" class="form-control">
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                        <button class="btn btn-primary" type="submit">Create a new sensor</button>
+                                        <button class="btn btn-primary" type="submit" id="createUser">Create a new sensor</button>
                                     </div>
                                 </form>
                             </div>
