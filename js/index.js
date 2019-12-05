@@ -1,7 +1,7 @@
 var IDsensor = -1;
-var id = [1,2,3,4];
-var temperature = [15,27,28,35];
-var humidity = [55,63,65,68];
+var id = [];
+var temperature = [];
+var humidity = [];
 var gaugeTemperature;
 var gaugeHumidity;
 var ready = false;
@@ -111,7 +111,7 @@ window.setInterval(
                     temperature.push(data[i]["temperature"]);
                     humidity.push(data[i]["humidity"]);
 
-                    console.log(tableBody);
+                    tableBody.innerHTML += '<tr></td>' + data[i]["sensor_id"] + '</td><td>' + data[i]["username"] + '</td><td>' + data[i]["email"] + '</td><td>' + data[i]["latitude"] + '</td><td>' + data[i]["longitude"] + '</td><td>' + data[i]["date"] + '</td></tr>'
                     /*var tableBody = document.getElementById("tableBodyInfo");
                     var row = document.createElement("tr");
                     
