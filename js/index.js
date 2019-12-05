@@ -79,58 +79,6 @@ $(function() {
 
     var tableBody = document.getElementById("tableBodyInfo");
 
-    var opcion = 1;
-    var datos = {"Opcion":opcion};
-    $.ajax({
-        url: "../php/getData.php",
-        type: "POST",
-        data: datos
-    }).done(function(respuesta){
-        temperature = [];
-        humidity = [];
-        var data = respuesta;
-        var dataSize = Object.keys(data).length;
-        for(var i = 1; i < dataSize+1; i++){
-            temperature.push(data[i]["temperature"]);
-            humidity.push(data[i]["humidity"]);
-
-            var row = document.createElement("tr");
-            
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["sensor_id"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["username"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["email"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["latitude"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["longitude"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["date"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            tableBody.appendChild(row);
-        }
-        ready = true;
-    });
-
 });
 
 
@@ -146,3 +94,60 @@ $('tr').click(function(e) {
     gaugeHumidity.set(humidity[IDsensor-1]);
  });
 
+window.setInterval(
+    function(){
+        if(!ready){
+            opcion = 1;
+            datos = {"Opcion":opcion};
+            $.ajax({
+                url: "../php/getData.php",
+                type: "POST",
+                data: datos
+            }).done(function(respuesta){
+                temperature = [];
+                humidity = [];
+                var data = respuesta;
+                var dataSize = Object.keys(data).length;
+                for(var i = 1; i < dataSize+1; i++){
+                    temperature.push(data[i]["temperature"]);
+                    humidity.push(data[i]["humidity"]);
+
+                    var row = document.createElement("tr");
+                    
+                    var cell = document.createElement("td");
+                    var textCell = document.createTextNode(data[i]["sensor_id"]);
+                    cell.appendChild(textCell);
+                    row.appendChild(cell);
+
+                    var cell = document.createElement("td");
+                    var textCell = document.createTextNode(data[i]["username"]);
+                    cell.appendChild(textCell);
+                    row.appendChild(cell);
+
+                    var cell = document.createElement("td");
+                    var textCell = document.createTextNode(data[i]["email"]);
+                    cell.appendChild(textCell);
+                    row.appendChild(cell);
+
+                    var cell = document.createElement("td");
+                    var textCell = document.createTextNode(data[i]["latitude"]);
+                    cell.appendChild(textCell);
+                    row.appendChild(cell);
+
+                    var cell = document.createElement("td");
+                    var textCell = document.createTextNode(data[i]["longitude"]);
+                    cell.appendChild(textCell);
+                    row.appendChild(cell);
+
+                    var cell = document.createElement("td");
+                    var textCell = document.createTextNode(data[i]["date"]);
+                    cell.appendChild(textCell);
+                    row.appendChild(cell);
+
+                    tableBody.appendChild(row);
+                }
+                ready = true;
+            });
+        }
+    }
+,1000)
