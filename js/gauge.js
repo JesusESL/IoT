@@ -40,7 +40,7 @@ $(function() {
     gaugeTemperature.maxValue = 50; // set max gauge value
     gaugeTemperature.setMinValue(0); // Prefer setter over gauge.minValue = 0
     gaugeTemperature.animationSpeed = 76; // set animation speed (32 is default value)
-    gaugeTemperature.set(25); // set actual value
+    gaugeTemperature.set(10); // set actual value
 
 // ============================================================== 
     // Guage 2
@@ -76,67 +76,6 @@ $(function() {
     gaugeHumidity.setMinValue(0); // Prefer setter over gauge.minValue = 0
     gaugeHumidity.animationSpeed = 76; // set animation speed (32 is default value)
     gaugeHumidity.set(10); // set actual value
-
-
-    /*var tabla = document.getElementById('dataBaseInfo');
-    var tablaHead = document.getElementById('dataBaseInfoHead');
-    var tablaBody = document.getElementById('dataBaseInfoBody');
-    var row = document.createElement("tr")
-
-    for(var i = 0; i < 6; i++){
-        var cell = document.createElement("td");
-        var textCell = document.createTextNode(headerText[i]);
-        cell.appendChild(textCell);
-        row.appendChild(cell);
-    }
-    tablaHead.appendChild(row);
-
-    opcion = 1;
-    datos = {"Opcion":opcion};
-    $.ajax({
-        url: "../php/getData.php",
-        type: "POST",
-        data: datos
-    }).done(function(respuesta){
-        temperature = [];
-        humidity = [];
-        var data = respuesta;
-        dataSize = Object.keys(data).length;
-        for(var i = 1; i < dataSize+1; i++){
-            temperature.push(data[i]["temperature"]);
-            humidity.push(data[i]["humidity"]);
-            var row = document.createElement("tr")
-
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["username"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["email"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["latitude"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["longitude"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            var cell = document.createElement("td");
-            var textCell = document.createTextNode(data[i]["date"]);
-            cell.appendChild(textCell);
-            row.appendChild(cell);
-
-            tablaBody.appendChild(body);
-        }
-        ready = true;
-    });*/
-
 });
 
 
@@ -148,8 +87,8 @@ $('tr').click(function(e) {
     document.getElementById("sensorLocation").innerHTML = "Location: (" + txt.find("td:eq(3)").text() + "," + txt.find("td:eq(4)").text()+ ")";
     document.getElementById("sensorDate").innerHTML = "Last update data: " + txt.find("td:eq(5)").text();
 
-    gaugeTemperature.set(temperature[IDsensor-1]);
-    gaugeHumidity.set(humidity[IDsensor-1]);
+    //gaugeTemperature.set(temperature[IDsensor-1]);
+    //gaugeHumidity.set(humidity[IDsensor-1]);
  });
 
 
