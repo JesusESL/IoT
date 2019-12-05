@@ -7,21 +7,7 @@
 	$conn_string = "host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$password." options='--client_encoding=UTF8'";
 	$dbconn = pg_connect($conn_string);
 
-	$id = $_GET["id"];
-	$temperature = $_GET["temperature"];
-	$humidity = $_GET["humidity"];
-	$latitude = $_GET["latitude"];
-	$longitude = $_GET["longitude"];
-	date_default_timezone_set('America/Mexico_City');
-	$date = date("Y-m-d");
-
-	echo $latitud;
-	echo "\n";
-
-	if($temperature != null){
-		$query =" UPDATE iot SET temperature = ".$temperature.", humidity = ".$humidity.", date = '".$date."' WHERE sensor_id =  ".$id."";
-		pg_query($query) or die('Error: ' . pg_last_error());
-		echo "Dato Actualizado";
-	}
+  console.log("Testing php form");
+  
 	pg_close($dbconn);
 ?>

@@ -90,7 +90,7 @@
                         <div class="card">
                             <h5 class="card-header">Sensor configuration</h5>
                             <div class="card-body">
-                                <form action="#" id="basicform" data-parsley-validate="">
+                                <form action="php/create_user.php" method="POST" id="basicform" data-parsley-validate="">
                                     <div class="form-group">
                                         <label for="inputUserName">Full name</label>
                                         <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
