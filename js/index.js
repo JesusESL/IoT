@@ -111,7 +111,10 @@ window.setInterval(
                     temperature.push(data[i]["temperature"]);
                     humidity.push(data[i]["humidity"]);
                     console.log(data[i]);
-
+                    if ($.fn.DataTable.isDataTable('#tableInfo')){
+                        $('#tableInfo').DataTable().destroy();
+                    };
+             
                     var tableBody = document.getElementById("tableBodyInfo");
                     var row = document.createElement("tr");
                     
@@ -147,6 +150,8 @@ window.setInterval(
 
                     tableBody.appendChild(row);
 
+                    // Initialize the table
+                    $('#tableInfo').DataTable();
                 }
                 ready = true;
             });

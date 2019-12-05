@@ -151,6 +151,9 @@
                                                 <th>Last update</th>
                                             </tr>
                                         </thead>
+                                        <tbody id="tableBodyInfo">
+
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
